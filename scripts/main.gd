@@ -1,9 +1,10 @@
 extends Node3D
 
-var checkpoint_pos: Vector3 = Vector3(0.0, 0.492775, 0.0)
+@onready var checkpoint_pos: Vector3 = Vector3(0.0, 0.492775, 0.0)
 
 
 func _ready() -> void:
+	print("checkpointpos:", Main.checkpoint_pos)
 	if RenderingServer.get_current_rendering_method() == "gl_compatibility":
 		# Reduce background and sun brightness when using the Compatibility renderer;
 		# this tries to roughly match the appearance of Forward+.
@@ -14,5 +15,6 @@ func _ready() -> void:
 
 
 func _on_checkpoint_1_body_entered(body: Node3D) -> void:
-	Main.checkpoint_pos = Vector3(-17.23919, 2.960511, 1.608208)
-	print(Main.checkpoint_pos)
+	if body.name == "Player":
+		Main.checkpoint_pos = Vector3(-17.82843, 2.570076, 0.394019)
+		print("checkpoint changed to", Main.checkpoint_pos)

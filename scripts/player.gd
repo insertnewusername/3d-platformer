@@ -59,6 +59,7 @@ func _physics_process(delta):
 
 	if position.y < -10:
 		global_position = Main.checkpoint_pos
+		print("Respawning at: ", global_position)
 		
 		if platform_folder:
 					for platform in platform_folder.get_children():
@@ -131,7 +132,6 @@ func handle_controls(delta):
 	# Jumping
 
 	if Input.is_action_just_pressed("jump"):
-
 		if jump_single or jump_double:
 			jump()
 
