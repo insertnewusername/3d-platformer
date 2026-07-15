@@ -58,7 +58,6 @@ func _physics_process(delta):
 	# Falling/respawning
 
 	if position.y < -10:
-		print(Main.checkpoint_pos)
 		global_position = Main.checkpoint_pos
 		
 		if platform_folder:

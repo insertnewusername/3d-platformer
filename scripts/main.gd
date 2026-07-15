@@ -14,5 +14,5 @@ func _ready() -> void:
 
 
 func _on_checkpoint_1_body_entered(body: Node3D) -> void:
-	checkpoint_pos = Vector3(-17.23919, 2.960511, 1.608208)
-	print(checkpoint_pos)
+	Main.checkpoint_pos = Vector3(-17.23919, 2.960511, 1.608208)
+	print(Main.checkpoint_pos)
