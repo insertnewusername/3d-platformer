@@ -160,17 +160,6 @@ transform = Transform3D(0.8552648, 0, -0.5181912, 0, 1, 0, 0.5181912, 0, 0.85526
 [node name="brick3" parent="World" unique_id=1831941675 instance=ExtResource("12_jkv2x")]
 transform = Transform3D(0.93908226, 0, 0.34369248, 0, 1, 0, -0.34369248, 0, 0.93908226, -19.034018, 3.215011, -12.660945)
 
-[node name="Checkpoint1" type="Area3D" parent="World" unique_id=1777955934]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.222496, 2.654313, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoint1" unique_id=401111257]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
-shape = SubResource("BoxShape3D_jkv2x")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoint1" unique_id=1791835954]
-transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
-mesh = SubResource("BoxMesh_jbj1t")
-
 [node name="Fallingplatforms" type="Node3D" parent="World" unique_id=213989774]
 
 [node name="platform-falling" parent="World/Fallingplatforms" unique_id=449689416 instance=ExtResource("9_2fnpo")]
@@ -184,6 +173,30 @@ transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -2
 
 [node name="platform-falling4" parent="World/Fallingplatforms" unique_id=398535366 instance=ExtResource("9_2fnpo")]
 transform = Transform3D(0.48337367, 0, 0.87541413, 0, 1, 0, -0.87541413, 0, 0.48337367, -35.681953, 2.445171, -13.172977)
+
+[node name="Checkpoints" type="Node3D" parent="World" unique_id=101236926]
+
+[node name="Checkpoint1" type="Area3D" parent="World/Checkpoints" unique_id=1777955934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.222496, 2.654313, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint1" unique_id=401111257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_jkv2x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint1" unique_id=1791835954]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_jbj1t")
+
+[node name="Checkpoint2" type="Area3D" parent="World/Checkpoints" unique_id=656652853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.491734, 3.4279928, -15.511991)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint2" unique_id=1280213009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_jkv2x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint2" unique_id=2044679816]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_jbj1t")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
@@ -234,4 +247,5 @@ label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
-[connection signal="body_entered" from="World/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
+[connection signal="body_entered" from="World/Checkpoints/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
+[connection signal="body_entered" from="World/Checkpoints/Checkpoint2" to="." method="_on_checkpoint_2_body_entered"]
