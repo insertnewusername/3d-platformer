@@ -24,11 +24,13 @@ var coins = 0
 @onready var sound_footsteps = $SoundFootsteps
 @onready var model = $Character
 @onready var animation = $Character/AnimationPlayer
+@onready var platform_folder: Node3D = $"../World/Fallingplatforms"
 
 # Functions
-
+func _ready():
+	print(Main.checkpoint_pos)
+	global_position = Main.checkpoint_pos
 func _physics_process(delta):
-
 	# Handle functions
 
 	handle_controls(delta)
@@ -56,8 +58,15 @@ func _physics_process(delta):
 	# Falling/respawning
 
 	if position.y < -10:
-		get_tree().reload_current_scene()
-
+		print(Main.checkpoint_pos)
+		global_position = Main.checkpoint_pos
+		
+		if platform_folder:
+					for platform in platform_folder.get_children():
+						if platform.has_method("reset_platform"):
+							platform.reset_platform()
+					
+					
 	# Animation for scale (jumping and landing)
 
 	model.scale = model.scale.lerp(Vector3(1, 1, 1), delta * 10)

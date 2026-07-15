@@ -16,6 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="13_jfda3"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="17_tk810"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
+size = Vector3(4.6347656, 1, 5.5875244)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jbj1t"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_38ys3"]
 font = ExtResource("17_tk810")
 font_size = 48
@@ -73,15 +78,6 @@ transform = Transform3D(0.929796, 0, -0.368076, 0, 1, 0, 0.368076, 0, 0.929796, 
 
 [node name="platform-medium3" parent="World" unique_id=622130049 instance=ExtResource("7_ixpj3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -20.327984)
-
-[node name="platform-falling" parent="World" unique_id=449689416 instance=ExtResource("9_2fnpo")]
-transform = Transform3D(0.984808, 0, 0.17364801, -0.007650115, 0.9990291, 0.043386012, -0.17347942, -0.044055298, 0.98385185, -32.141792, 2.070179, -10.24524)
-
-[node name="platform-falling2" parent="World" unique_id=915050357 instance=ExtResource("9_2fnpo")]
-transform = Transform3D(0.994522, 0, -0.104528, 0, 1, 0, 0.104528, 0, 0.994522, -28.309387, 1.5899663, -6.732889)
-
-[node name="platform-falling3" parent="World" unique_id=267862304 instance=ExtResource("9_2fnpo")]
-transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -24.520462, 1.9905783, -1.7972431)
 
 [node name="platform-grass-large-round" parent="World" unique_id=1637479868 instance=ExtResource("8_4oh1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.742756, 2.7519, -15.113725)
@@ -164,7 +160,29 @@ transform = Transform3D(0.8552648, 0, -0.5181912, 0, 1, 0, 0.5181912, 0, 0.85526
 [node name="brick3" parent="World" unique_id=1831941675 instance=ExtResource("12_jkv2x")]
 transform = Transform3D(0.93908226, 0, 0.34369248, 0, 1, 0, -0.34369248, 0, 0.93908226, -19.034018, 3.215011, -12.660945)
 
-[node name="platform-falling4" parent="World" unique_id=398535366 instance=ExtResource("9_2fnpo")]
+[node name="Checkpoint1" type="Area3D" parent="World" unique_id=1777955934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.222496, 2.654313, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoint1" unique_id=401111257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_jkv2x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoint1" unique_id=1791835954]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_jbj1t")
+
+[node name="Fallingplatforms" type="Node3D" parent="World" unique_id=213989774]
+
+[node name="platform-falling" parent="World/Fallingplatforms" unique_id=449689416 instance=ExtResource("9_2fnpo")]
+transform = Transform3D(0.984808, 0, 0.17364801, -0.007650115, 0.9990291, 0.043386012, -0.17347942, -0.044055298, 0.98385185, -32.141792, 2.070179, -10.24524)
+
+[node name="platform-falling2" parent="World/Fallingplatforms" unique_id=915050357 instance=ExtResource("9_2fnpo")]
+transform = Transform3D(0.994522, 0, -0.104528, 0, 1, 0, 0.104528, 0, 0.994522, -28.309387, 1.5899663, -6.732889)
+
+[node name="platform-falling3" parent="World/Fallingplatforms" unique_id=267862304 instance=ExtResource("9_2fnpo")]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -24.520462, 1.9905783, -1.7972431)
+
+[node name="platform-falling4" parent="World/Fallingplatforms" unique_id=398535366 instance=ExtResource("9_2fnpo")]
 transform = Transform3D(0.48337367, 0, 0.87541413, 0, 1, 0, -0.87541413, 0, 0.48337367, -35.681953, 2.445171, -13.172977)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
@@ -216,3 +234,4 @@ label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
+[connection signal="body_entered" from="World/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
