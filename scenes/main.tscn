@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="13_drtpy"]
 [ext_resource type="PackedScene" uid="uid://byi40xln0ujpy" path="res://objects/spinnyplatform.tscn" id="13_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="13_jfda3"]
+[ext_resource type="PackedScene" uid="uid://dxmix18v26tji" path="res://objects/bigspinnyplatform.tscn" id="14_muem4"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="17_tk810"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
@@ -217,6 +218,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.620451, 4.772543, -23.550
 
 [node name="platform-grass-large-round2" parent="World/Spinnyplatform" unique_id=1667346809 instance=ExtResource("13_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.45089, 5.237165, -21.713608)
+
+[node name="platform-grass-large-round3" parent="World/Spinnyplatform" unique_id=1156158097 instance=ExtResource("14_muem4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.484683, 6.123755, -21.770039)
 
 [node name="platform-grass-large-round3" parent="World" unique_id=479731932 instance=ExtResource("8_4oh1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6803885, 5.75307, -22.50563)
