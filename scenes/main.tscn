@@ -271,7 +271,7 @@ transform = Transform3D(-2.8441358e-08, 0, 0.90337473, 0, 0.3707991, 0, -0.65066
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.862707, 9.563549, -6.9510756)
 
 [node name="Colourballs" parent="World" unique_id=1420264917 instance=ExtResource("16_0ld40")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -26.54758, 10.62875, -7.279659)
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, -26.54758, 10.62875, -7.279659)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
