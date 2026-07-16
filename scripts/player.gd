@@ -148,7 +148,6 @@ func handle_gravity(delta):
 # Jumping
 
 func jump():
-	print(global_position)
 	Audio.play("res://sounds/jump.ogg")
 
 	gravity = -jump_strength
