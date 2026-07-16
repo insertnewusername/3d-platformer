@@ -129,7 +129,8 @@ func handle_controls(delta):
 	movement_velocity = input * movement_speed * delta
 
 	# Jumping
-
+	if Input.is_action_just_pressed("jump"):
+		jump()
 	if Input.is_action_just_pressed("jump"):
 		if jump_single or jump_double:
 			jump()
