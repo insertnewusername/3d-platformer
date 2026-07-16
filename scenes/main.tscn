@@ -78,7 +78,7 @@ transform = Transform3D(0.995121, 0, 0.0986598, 0, 1, 0, -0.0986598, 0, 0.995121
 transform = Transform3D(0.929796, 0, -0.368076, 0, 1, 0, 0.368076, 0, 0.929796, -32.61032, 4.2634096, -24.927607)
 
 [node name="platform-medium3" parent="World" unique_id=622130049 instance=ExtResource("7_ixpj3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -20.327984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23096895, 6.107596, -22.472336)
 
 [node name="platform-grass-large-round" parent="World" unique_id=1637479868 instance=ExtResource("8_4oh1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.742756, 2.7519, -15.113725)
