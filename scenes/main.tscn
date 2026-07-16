@@ -253,7 +253,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6803885, 5.75307, -22.5056
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2846107, 9.563549, -6.9510756)
 
 [node name="Node3D" parent="World" unique_id=544104476 instance=ExtResource("15_dp3eg")]
-transform = Transform3D(0.6506625, 0, 0, 0, 0.37079912, 0, 0, 0, 0.9033748, 7.4898205, 9.995807, -12.620809)
+transform = Transform3D(0.6506625, 0, 0, 0, 0.37079912, 0, 0, 0, 0.9033748, 7.4898205, 9.995807, -13.956458)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
