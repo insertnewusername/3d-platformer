@@ -176,6 +176,15 @@ transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -2
 [node name="platform-falling4" parent="World/Fallingplatforms" unique_id=398535366 instance=ExtResource("9_2fnpo")]
 transform = Transform3D(0.48337367, 0, 0.87541413, 0, 1, 0, -0.87541413, 0, 0.48337367, -35.681953, 2.445171, -13.172977)
 
+[node name="platform-falling5" parent="World/Fallingplatforms" unique_id=1739418132 instance=ExtResource("9_2fnpo")]
+transform = Transform3D(0.99999964, 0, 0.00082077086, 0, 1, 0, -0.00082077086, 0, 0.99999964, 14.976339, 7.307842, -11.733652)
+
+[node name="platform-falling6" parent="World/Fallingplatforms" unique_id=1526207885 instance=ExtResource("9_2fnpo")]
+transform = Transform3D(0.85339606, 0, 0.5212633, 0, 1, 0, -0.5212633, 0, 0.85339606, 14.976339, 8.3221245, -7.6122794)
+
+[node name="platform-falling7" parent="World/Fallingplatforms" unique_id=1524873852 instance=ExtResource("9_2fnpo")]
+transform = Transform3D(0.14007136, 0, 0.9901415, 0, 1, 0, -0.9901415, 0, 0.14007136, 11.655643, 9.0879545, -6.013995)
+
 [node name="Checkpoints" type="Node3D" parent="World" unique_id=101236926]
 
 [node name="Checkpoint1" type="Area3D" parent="World/Checkpoints" unique_id=1777955934]
@@ -211,6 +220,17 @@ shape = SubResource("BoxShape3D_jkv2x")
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
 mesh = SubResource("BoxMesh_jbj1t")
 
+[node name="Checkpoint4" type="Area3D" parent="World/Checkpoints" unique_id=1224400892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.277137, 10.02132, -7.328103)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint4" unique_id=1501496830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_jkv2x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint4" unique_id=1322587764]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_jbj1t")
+
 [node name="Spinnyplatform" type="Node3D" parent="World" unique_id=459119053]
 
 [node name="platform-grass-large-round" parent="World/Spinnyplatform" unique_id=815574895 instance=ExtResource("13_jbj1t")]
@@ -222,8 +242,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.45089, 5.237165, -21.7136
 [node name="platform-grass-large-round3" parent="World/Spinnyplatform" unique_id=1156158097 instance=ExtResource("14_muem4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.484683, 6.123755, -21.770039)
 
+[node name="platform-grass-large-round4" parent="World/Spinnyplatform" unique_id=1344623773 instance=ExtResource("14_muem4")]
+transform = Transform3D(0.97314674, 0, 0.23018563, 0, 1, 0, -0.23018563, 0, 0.97314674, 14.828803, 6.5856547, -18.0849)
+
 [node name="platform-grass-large-round3" parent="World" unique_id=479731932 instance=ExtResource("8_4oh1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6803885, 5.75307, -22.50563)
+
+[node name="platform-grass-large-round4" parent="World" unique_id=1918797815 instance=ExtResource("8_4oh1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2846107, 9.563549, -6.9510756)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
@@ -277,3 +303,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint2" to="." method="_on_checkpoint_2_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint3" to="." method="_on_checkpoint_3_body_entered"]
+[connection signal="body_entered" from="World/Checkpoints/Checkpoint4" to="." method="_on_checkpoint_4_body_entered"]

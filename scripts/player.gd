@@ -32,7 +32,6 @@ func _ready():
 	global_position = Main.checkpoint_pos
 func _physics_process(delta):
 	# Handle functions
-
 	handle_controls(delta)
 	handle_gravity(delta)
 
@@ -149,6 +148,7 @@ func handle_gravity(delta):
 # Jumping
 
 func jump():
+	print(global_position)
 	Audio.play("res://sounds/jump.ogg")
 
 	gravity = -jump_strength
