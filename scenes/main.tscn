@@ -63,7 +63,7 @@ transform = Transform3D(0.85970074, 0, -0.51079834, 0, 1, 0, 0.51079834, 0, 0.85
 transform = Transform3D(0.9779442, 0, 0.20886743, 0, 1, 0, -0.20886743, 0, 0.9779442, -40.87967, 2.9591885, -20.735037)
 
 [node name="platform2" parent="World" unique_id=1359286385 instance=ExtResource("6_sdmev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, -17.327984)
+transform = Transform3D(0.983204, 0, 0.1825101, 0, 1, 0, -0.1825101, 0, 0.983204, -10.569267, 5.2317185, -21.796915)
 
 [node name="platform3" parent="World" unique_id=926589032 instance=ExtResource("6_sdmev")]
 transform = Transform3D(0.966237, 0, -0.257656, 0, 1, 0, 0.257656, 0, 0.966237, -12.531048, 1.5894141, 2.2922606)
@@ -199,6 +199,17 @@ shape = SubResource("BoxShape3D_jkv2x")
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
 mesh = SubResource("BoxMesh_jbj1t")
 
+[node name="Checkpoint3" type="Area3D" parent="World/Checkpoints" unique_id=2023161129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.680253, 6.0496426, -23.071901)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint3" unique_id=1625683826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_jkv2x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint3" unique_id=483081687]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_jbj1t")
+
 [node name="Spinnyplatform" type="Node3D" parent="World" unique_id=459119053]
 
 [node name="platform-grass-large-round" parent="World/Spinnyplatform" unique_id=815574895 instance=ExtResource("13_jbj1t")]
@@ -206,6 +217,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.620451, 4.772543, -23.550
 
 [node name="platform-grass-large-round2" parent="World/Spinnyplatform" unique_id=1667346809 instance=ExtResource("13_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.45089, 5.237165, -21.713608)
+
+[node name="platform-grass-large-round3" parent="World" unique_id=479731932 instance=ExtResource("8_4oh1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6803885, 5.75307, -22.50563)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
@@ -258,3 +272,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint2" to="." method="_on_checkpoint_2_body_entered"]
+[connection signal="body_entered" from="World/Checkpoints/Checkpoint3" to="." method="_on_checkpoint_3_body_entered"]
