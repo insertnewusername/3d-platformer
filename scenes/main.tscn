@@ -54,7 +54,7 @@ fov = 40.0
 transform = Transform3D(0.993085, 0, -0.117399, 0, 1, 0, 0.117399, 0, 0.993085, 0, 0, 0)
 
 [node name="platform4" parent="World" unique_id=317674078 instance=ExtResource("6_sdmev")]
-transform = Transform3D(0.993085, 0, -0.117399, 0, 1, 0, 0.117399, 0, 0.993085, -15, 0, -11.530394)
+transform = Transform3D(0.993085, 0, -0.117399, 0, 1, 0, 0.117399, 0, 0.993085, -20.248272, 5.1086326, -22.398676)
 
 [node name="platform5" parent="World" unique_id=1066353969 instance=ExtResource("6_sdmev")]
 transform = Transform3D(0.85970074, 0, -0.51079834, 0, 1, 0, 0.51079834, 0, 0.85970074, -38.510395, 3.5386236, -24.720127)
@@ -203,6 +203,9 @@ mesh = SubResource("BoxMesh_jbj1t")
 
 [node name="platform-grass-large-round" parent="World/Spinnyplatform" unique_id=815574895 instance=ExtResource("13_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.620451, 4.772543, -23.550697)
+
+[node name="platform-grass-large-round2" parent="World/Spinnyplatform" unique_id=1667346809 instance=ExtResource("13_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.45089, 5.237165, -21.713608)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
