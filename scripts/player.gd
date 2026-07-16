@@ -168,3 +168,13 @@ func collect_coin():
 	coins += 1
 
 	coin_collected.emit(coins)
+
+func die():
+	global_position = Main.checkpoint_pos
+	print("Respawning at: ", global_position)
+		
+	if platform_folder:
+		for platform in platform_folder.get_children():
+			if platform.has_method("reset_platform"):
+				platform.reset_platform()
+					

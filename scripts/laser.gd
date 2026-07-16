@@ -9,3 +9,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	rotate_y(spinny_speed * delta)
+	
+	
+	
+
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		body.die()

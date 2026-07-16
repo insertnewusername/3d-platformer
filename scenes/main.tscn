@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://scripts/hud.gd" id="11_apvpm"]
 [ext_resource type="PackedScene" uid="uid://85ldumyetgou" path="res://objects/brick.tscn" id="12_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="13_drtpy"]
+[ext_resource type="PackedScene" uid="uid://byi40xln0ujpy" path="res://objects/spinnyplatform.tscn" id="13_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="13_jfda3"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="17_tk810"]
 
@@ -197,6 +198,11 @@ shape = SubResource("BoxShape3D_jkv2x")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint2" unique_id=2044679816]
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
 mesh = SubResource("BoxMesh_jbj1t")
+
+[node name="Spinnyplatform" type="Node3D" parent="World" unique_id=459119053]
+
+[node name="platform-grass-large-round" parent="World/Spinnyplatform" unique_id=815574895 instance=ExtResource("13_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.620451, 4.772543, -23.550697)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)

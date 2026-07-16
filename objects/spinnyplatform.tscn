@@ -38,3 +38,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5vtpr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="1" unique_id=1388492575]
 transform = Transform3D(0.20805596, 0, 0, 0, -1.0327605e-07, -0.20067641, 0, 2.3626807, -8.771845e-09, 0, 0.60279906, 0)
 shape = SubResource("ConcavePolygonShape3D_hq5vj")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
