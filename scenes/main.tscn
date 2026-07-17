@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dxmix18v26tji" path="res://objects/bigspinnyplatform.tscn" id="14_muem4"]
 [ext_resource type="PackedScene" uid="uid://basroaq05ewmh" path="res://objects/mysteryfloor.tscn" id="15_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://sjjopx27f6yj" path="res://objects/colourballs.tscn" id="16_0ld40"]
+[ext_resource type="PackedScene" uid="uid://8crl27syp4yp" path="res://objects/movingplatform.tscn" id="17_gqmmt"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="17_tk810"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
@@ -275,6 +276,9 @@ transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-
 
 [node name="platform-medium5" parent="World" unique_id=444442727 instance=ExtResource("7_ixpj3")]
 transform = Transform3D(0.99523616, 0, 0.09749606, 0, 1, 0, -0.09749606, 0, 0.99523616, -40.77133, 15.129306, -10.961243)
+
+[node name="Sliding platform" parent="World" unique_id=483386934 instance=ExtResource("17_gqmmt")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -40.46242, 15.078155, -7.0955896)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
