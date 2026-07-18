@@ -41,6 +41,9 @@ albedo_color = Color(0.35686275, 0.9019608, 0.44313726, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7wvbm"]
 data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hlsmc"]
+size = Vector3(8.599548, 1, 2.7890015)
+
 [node name="Node3D" type="Node3D" unique_id=1841644537]
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=344116618]
@@ -103,17 +106,25 @@ mesh = ExtResource("5_bfqb0")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5407671, 0, 2.018305)
 mesh = ExtResource("5_bfqb0")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Node3D" unique_id=712997538]
+[node name="Steps" type="StaticBody3D" parent="Node3D" unique_id=712997538]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Cliff_steps_stone" type="MeshInstance3D" parent="Node3D/StaticBody3D2" unique_id=1812069164]
+[node name="Cliff_steps_stone" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1812069164]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 mesh = ExtResource("6_hlsmc")
 
-[node name="Cliff_steps_stone2" type="MeshInstance3D" parent="Node3D/StaticBody3D2" unique_id=890309833]
+[node name="Cliff_steps_stone2" type="MeshInstance3D" parent="Node3D/Steps" unique_id=890309833]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.998, 0, 0)
 mesh = ExtResource("6_hlsmc")
 
-[node name="Cliff_steps_stone3" type="MeshInstance3D" parent="Node3D/StaticBody3D2" unique_id=155143928]
+[node name="Cliff_steps_stone3" type="MeshInstance3D" parent="Node3D/Steps" unique_id=155143928]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.998, 0, 0)
 mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone4" type="MeshInstance3D" parent="Node3D/Steps" unique_id=288726785]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.996, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Maincollision" type="CollisionShape3D" parent="Node3D/Steps" unique_id=2035304176]
+transform = Transform3D(1, 0, 0, 0, 0.6613774, 0.7500534, 0, -0.7500534, 0.6613774, -2.0586853, 0.7147625, 0.6161784)
+shape = SubResource("BoxShape3D_hlsmc")

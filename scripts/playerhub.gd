@@ -24,7 +24,10 @@ var jump_double = true
 
 # Functions
 func _ready():
-	pass
+	motion_mode = CharacterBody3D.MOTION_MODE_GROUNDED
+	set_up_direction(Vector3.UP)
+	floor_max_angle = deg_to_rad(60)
+	floor_snap_length = 0.3
 func _physics_process(delta):
 	# Handle functions
 	handle_controls(delta)
