@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://scripts/view.gd" id="2_w6xti"]
 [ext_resource type="ArrayMesh" uid="uid://emlrxmuhj7hx" path="res://OBJ format/ground_grass.obj" id="4_7wvbm"]
 [ext_resource type="ArrayMesh" uid="uid://bod8avp2qjchr" path="res://OBJ format/path_stone.obj" id="5_bfqb0"]
+[ext_resource type="ArrayMesh" uid="uid://b3aadau1xbfwc" path="res://OBJ format/cliff_steps_stone.obj" id="6_hlsmc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7wvbm"]
 sky_top_color = Color(0.5150173, 0.91569144, 0.97581166, 1)
@@ -101,3 +102,18 @@ mesh = ExtResource("5_bfqb0")
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D/StaticBody3D" unique_id=1224644683]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5407671, 0, 2.018305)
 mesh = ExtResource("5_bfqb0")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Node3D" unique_id=712997538]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Cliff_steps_stone" type="MeshInstance3D" parent="Node3D/StaticBody3D2" unique_id=1812069164]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone2" type="MeshInstance3D" parent="Node3D/StaticBody3D2" unique_id=890309833]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.998, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone3" type="MeshInstance3D" parent="Node3D/StaticBody3D2" unique_id=155143928]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.998, 0, 0)
+mesh = ExtResource("6_hlsmc")
