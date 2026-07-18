@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cqn7hhqbdeeg7" path="res://scripts/playerhub.gd" id="2_7wvbm"]
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://scripts/view.gd" id="2_w6xti"]
 [ext_resource type="ArrayMesh" uid="uid://emlrxmuhj7hx" path="res://OBJ format/ground_grass.obj" id="4_7wvbm"]
+[ext_resource type="ArrayMesh" uid="uid://bod8avp2qjchr" path="res://OBJ format/path_stone.obj" id="5_bfqb0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7wvbm"]
 sky_top_color = Color(0.5150173, 0.91569144, 0.97581166, 1)
@@ -73,3 +74,30 @@ surface_material_override/0 = SubResource("StandardMaterial3D_441x5")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/Ground" unique_id=2066705615]
 transform = Transform3D(44.629623, 0, 0, 0, 2.1537728, 0, 0, 0, 42.117447, -0.006, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_7wvbm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D" unique_id=642447047]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.6665673, 0, -30.577255)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/StaticBody3D" unique_id=191752929]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+mesh = ExtResource("5_bfqb0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D/StaticBody3D" unique_id=1863874086]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5407671, 0, 0)
+mesh = ExtResource("5_bfqb0")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D/StaticBody3D" unique_id=1354083347]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 1.0148268)
+mesh = ExtResource("5_bfqb0")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D/StaticBody3D" unique_id=1580339677]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5407671, 0, 1.0148268)
+mesh = ExtResource("5_bfqb0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D/StaticBody3D" unique_id=938763706]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2.018305)
+mesh = ExtResource("5_bfqb0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D/StaticBody3D" unique_id=1224644683]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5407671, 0, 2.018305)
+mesh = ExtResource("5_bfqb0")

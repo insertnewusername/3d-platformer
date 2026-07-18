@@ -24,8 +24,7 @@ var jump_double = true
 
 # Functions
 func _ready():
-	print(Main.checkpoint_pos)
-	global_position = Main.checkpoint_pos
+	pass
 func _physics_process(delta):
 	# Handle functions
 	handle_controls(delta)
