@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="1_d1od2"]
 [ext_resource type="Script" uid="uid://cqn7hhqbdeeg7" path="res://scripts/playerhub.gd" id="2_7wvbm"]
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://scripts/view.gd" id="2_w6xti"]
+[ext_resource type="ArrayMesh" uid="uid://emlrxmuhj7hx" path="res://OBJ format/ground_grass.obj" id="4_7wvbm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7wvbm"]
 sky_top_color = Color(0.5150173, 0.91569144, 0.97581166, 1)
@@ -32,13 +33,11 @@ adjustment_brightness = 0.9
 adjustment_contrast = 1.1
 adjustment_saturation = 1.1
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_3wyi3"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_441x5"]
 albedo_color = Color(0.35686275, 0.9019608, 0.44313726, 1)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w6xti"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7wvbm"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5)
 
 [node name="Node3D" type="Node3D" unique_id=1841644537]
 
@@ -46,12 +45,12 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 environment = SubResource("Environment_hlsmc")
 
 [node name="Player" parent="." unique_id=800486646 node_paths=PackedStringArray("view") groups=["player"] instance=ExtResource("1_d1od2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49277484, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49277484, -33.10211)
 script = ExtResource("2_7wvbm")
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." unique_id=121181287 node_paths=PackedStringArray("target")]
-transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, 0)
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, -33.10211)
 script = ExtResource("2_w6xti")
 target = NodePath("../Player")
 
@@ -60,14 +59,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 current = true
 fov = 40.0
 
-[node name="Ground" type="StaticBody3D" parent="." unique_id=1005255225]
+[node name="Node3D" type="Node3D" parent="." unique_id=35573761]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=719772125]
+[node name="Ground" type="StaticBody3D" parent="Node3D" unique_id=1005255225]
+transform = Transform3D(3.4138114, 0, 0, 0, 1, 0, 0, 0, 2.794098, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Ground" unique_id=719772125]
 transform = Transform3D(44.629623, 0, 0, 0, 2.1537728, 0, 0, 0, 42.117447, -0.006, 0, 0)
-mesh = SubResource("PlaneMesh_3wyi3")
-skeleton = NodePath("../..")
+mesh = ExtResource("4_7wvbm")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_441x5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=335350717]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/Ground" unique_id=2066705615]
 transform = Transform3D(44.629623, 0, 0, 0, 2.1537728, 0, 0, 0, 42.117447, -0.006, 0, 0)
-shape = SubResource("ConcavePolygonShape3D_w6xti")
+shape = SubResource("ConcavePolygonShape3D_7wvbm")

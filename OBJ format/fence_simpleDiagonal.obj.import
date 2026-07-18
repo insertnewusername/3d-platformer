@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dptm2ammhe6ve"
+path="res://.godot/imported/fence_simpleDiagonal.obj-d43aa3312d04dd922f0e8e1177bf6c20.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fence_simpleDiagonal.obj-d43aa3312d04dd922f0e8e1177bf6c20.mesh"]
+
+source_file="res://OBJ format/fence_simpleDiagonal.obj"
+dest_files=["res://.godot/imported/fence_simpleDiagonal.obj-d43aa3312d04dd922f0e8e1177bf6c20.mesh", "res://.godot/imported/fence_simpleDiagonal.obj-d43aa3312d04dd922f0e8e1177bf6c20.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

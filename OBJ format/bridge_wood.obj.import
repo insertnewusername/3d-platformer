@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://baty4i3j6tyeo"
+path="res://.godot/imported/bridge_wood.obj-56d7ddb3a9e9e2ecf2b77b439a9f1288.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bridge_wood.obj-56d7ddb3a9e9e2ecf2b77b439a9f1288.mesh"]
+
+source_file="res://OBJ format/bridge_wood.obj"
+dest_files=["res://.godot/imported/bridge_wood.obj-56d7ddb3a9e9e2ecf2b77b439a9f1288.mesh", "res://.godot/imported/bridge_wood.obj-56d7ddb3a9e9e2ecf2b77b439a9f1288.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

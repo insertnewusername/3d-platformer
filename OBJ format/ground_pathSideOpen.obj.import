@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqbao41vqduif"
+path="res://.godot/imported/ground_pathSideOpen.obj-d92cf6a4ecebb01b8aea45ef0e9bbefe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ground_pathSideOpen.obj-d92cf6a4ecebb01b8aea45ef0e9bbefe.mesh"]
+
+source_file="res://OBJ format/ground_pathSideOpen.obj"
+dest_files=["res://.godot/imported/ground_pathSideOpen.obj-d92cf6a4ecebb01b8aea45ef0e9bbefe.mesh", "res://.godot/imported/ground_pathSideOpen.obj-d92cf6a4ecebb01b8aea45ef0e9bbefe.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
