@@ -11,6 +11,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c7fq3rrou1eoy" path="res://OBJ format/path_stoneEnd.obj" id="8_lcd1r"]
 [ext_resource type="ArrayMesh" uid="uid://dq56mbxbiyc4r" path="res://OBJ format/cliff_stepsCorner_stone.obj" id="9_2hkft"]
 [ext_resource type="ArrayMesh" uid="uid://4vdul4fi06b3" path="res://OBJ format/cliff_half_stone.obj" id="10_4oyfp"]
+[ext_resource type="ArrayMesh" uid="uid://m53lucndnjkf" path="res://OBJ format/cliff_block_stone.obj" id="12_s6eg2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7wvbm"]
 sky_top_color = Color(0.5150173, 0.91569144, 0.97581166, 1)
@@ -122,6 +123,9 @@ shadow_mesh = SubResource("ArrayMesh_trsj5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hlsmc"]
 size = Vector3(15.074425, 1, 2.7890015)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_glsmu"]
+data = PackedVector3Array(0.5, 1, 0.5, -0.5, 1, -0.5, 0.5, 1, -0.5, -0.5, 1, -0.5, 0.5, 1, 0.5, -0.5, 1, 0.5, 0.5, 0, -0.5, 0.5, 1, 0.5, 0.5, 1, -0.5, 0.5, 1, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 1, 0.5, 0.5, 0, 0.5, 0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 1, 0.5, 0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, -0.5, -0.5, 1, -0.5, 0.5, 0, -0.5, 0.5, 1, -0.5, -0.5, 1, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 1, -0.5, -0.5, 1, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5)
 
 [node name="Node3D" type="Node3D" unique_id=1841644537]
 
@@ -469,3 +473,16 @@ mesh = ExtResource("10_4oyfp")
 [node name="Cliff_steps_stone23" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=160658389]
 transform = Transform3D(-4.3711392e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.3711392e-08, -6.989, 0.501, 0.947)
 mesh = ExtResource("10_4oyfp")
+
+[node name="Cliff" type="Node3D" parent="Node3D/Steps/Node3D" unique_id=1108404251]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/Steps/Node3D/Cliff" unique_id=153860442]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Steps/Node3D/Cliff/StaticBody3D" unique_id=1213989613]
+transform = Transform3D(13.451404, 0, 0, 0, 1.299317, 0, 0, 0, 13.616683, 0, 0.69, 8.258186)
+mesh = ExtResource("12_s6eg2")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Steps/Node3D/Cliff/StaticBody3D" unique_id=1606206318]
+transform = Transform3D(13.451404, 0, 0, 0, 1.299317, 0, 0, 0, 13.616683, 0, 0.69, 8.258186)
+shape = SubResource("ConcavePolygonShape3D_glsmu")
