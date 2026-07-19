@@ -8,6 +8,8 @@
 [ext_resource type="ArrayMesh" uid="uid://bod8avp2qjchr" path="res://OBJ format/path_stone.obj" id="5_bfqb0"]
 [ext_resource type="ArrayMesh" uid="uid://bcd03u6tfg4hy" path="res://OBJ format/fountain_leaves.obj" id="6_2hkft"]
 [ext_resource type="ArrayMesh" uid="uid://b3aadau1xbfwc" path="res://OBJ format/cliff_steps_stone.obj" id="6_hlsmc"]
+[ext_resource type="ArrayMesh" uid="uid://dq56mbxbiyc4r" path="res://OBJ format/cliff_stepsCorner_stone.obj" id="9_2hkft"]
+[ext_resource type="ArrayMesh" uid="uid://4vdul4fi06b3" path="res://OBJ format/cliff_half_stone.obj" id="10_4oyfp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7wvbm"]
 sky_top_color = Color(0.5150173, 0.91569144, 0.97581166, 1)
@@ -118,7 +120,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_trsj5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hlsmc"]
-size = Vector3(8.599548, 1, 2.7890015)
+size = Vector3(15.074425, 1, 2.7890015)
 
 [node name="Node3D" type="Node3D" unique_id=1841644537]
 
@@ -197,22 +199,152 @@ mesh = ExtResource("5_bfqb0")
 [node name="Steps" type="StaticBody3D" parent="Node3D" unique_id=712997538]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Cliff_steps_stone" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1812069164]
+[node name="Maincollision" type="CollisionShape3D" parent="Node3D/Steps" unique_id=2035304176]
+transform = Transform3D(1, 0, 0, 0, 0.6613774, 0.7500534, 0, -0.7500534, 0.6613774, -0.04467392, 0.7147625, 0.6161784)
+shape = SubResource("BoxShape3D_hlsmc")
+
+[node name="Cliff_steps_stone5" type="MeshInstance3D" parent="Node3D/Steps" unique_id=31761025]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 mesh = ExtResource("6_hlsmc")
 
-[node name="Cliff_steps_stone2" type="MeshInstance3D" parent="Node3D/Steps" unique_id=890309833]
+[node name="Cliff_steps_stone6" type="MeshInstance3D" parent="Node3D/Steps" unique_id=514767570]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.998, 0, 0)
 mesh = ExtResource("6_hlsmc")
 
-[node name="Cliff_steps_stone3" type="MeshInstance3D" parent="Node3D/Steps" unique_id=155143928]
+[node name="Cliff_steps_stone7" type="MeshInstance3D" parent="Node3D/Steps" unique_id=369180270]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.998, 0, 0)
 mesh = ExtResource("6_hlsmc")
 
-[node name="Cliff_steps_stone4" type="MeshInstance3D" parent="Node3D/Steps" unique_id=288726785]
+[node name="Cliff_steps_stone8" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1796450310]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.996, 0, 0)
 mesh = ExtResource("6_hlsmc")
 
-[node name="Maincollision" type="CollisionShape3D" parent="Node3D/Steps" unique_id=2035304176]
-transform = Transform3D(1, 0, 0, 0, 0.6613774, 0.7500534, 0, -0.7500534, 0.6613774, -2.0586853, 0.7147625, 0.6161784)
-shape = SubResource("BoxShape3D_hlsmc")
+[node name="Cliff_steps_stone9" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1513748324]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.996, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone10" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1824546658]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.994, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone11" type="MeshInstance3D" parent="Node3D/Steps" unique_id=2119354874]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.992, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone12" type="MeshInstance3D" parent="Node3D/Steps" unique_id=243163338]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.99, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone13" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1757693085]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.99, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone14" type="MeshInstance3D" parent="Node3D/Steps" unique_id=565913605]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.992, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone15" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1084942237]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.994, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone16" type="MeshInstance3D" parent="Node3D/Steps" unique_id=531477534]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.988, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone17" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1638106830]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.988, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone18" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1168346055]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.986, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone19" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1865287468]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.986, 0, 0)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone20" type="MeshInstance3D" parent="Node3D/Steps" unique_id=1024481294]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.984, 0, 0)
+mesh = ExtResource("9_2hkft")
+
+[node name="Cliff_steps_stone21" type="MeshInstance3D" parent="Node3D/Steps" unique_id=771491081]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.984, 0, 0)
+mesh = ExtResource("9_2hkft")
+
+[node name="Node3D" type="Node3D" parent="Node3D/Steps" unique_id=1769062881]
+
+[node name="Cliff_steps_stone5" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=549801556]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone6" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=581506143]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.998, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone7" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=1179326953]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.998, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone8" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=2071301440]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.996, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone9" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=601092792]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.996, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone10" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=1311434855]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.994, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone11" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=179252744]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.992, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone12" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=225532608]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.99, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone13" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=1077125775]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.99, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone14" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=563195241]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.992, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone15" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=305811329]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.994, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone16" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=2091435755]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.988, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone17" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=1275975077]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.988, 0.9862318, 0.94623804)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone18" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=634363190]
+transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, 6.985831, 0.9880016, 0.94740415)
+mesh = ExtResource("9_2hkft")
+
+[node name="Cliff_steps_stone19" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=1828112477]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.984, 0.998, 0.947)
+mesh = ExtResource("9_2hkft")
+
+[node name="Cliff_steps_stone20" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=711229651]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.986, 0.019, 0.998)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone21" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=1439296131]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.9855385, 0, 0.99830556)
+mesh = ExtResource("6_hlsmc")
+
+[node name="Cliff_steps_stone22" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=1998217137]
+transform = Transform3D(-0.0027052015, 0, -0.9999965, 0, 1, 0, 0.9999965, 0, -0.0027052015, 6.989277, 0.50059164, 0.94740415)
+mesh = ExtResource("10_4oyfp")
+
+[node name="Cliff_steps_stone23" type="MeshInstance3D" parent="Node3D/Steps/Node3D" unique_id=160658389]
+transform = Transform3D(-4.3711392e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.3711392e-08, -6.989, 0.501, 0.947)
+mesh = ExtResource("10_4oyfp")
