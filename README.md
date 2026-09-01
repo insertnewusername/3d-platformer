@@ -5,6 +5,8 @@ This is a 3d platformer I made using Godot.
 It uses Godot and stuff, so godotscript ig.
 
 Demo url: https://insertnewusernamehere.itch.io/jumpy
+<img width="1917" height="962" alt="Screenshot 2026-09-01 185031" src="https://github.com/user-attachments/assets/45053add-40c4-4784-b5ea-3a1786d3ecb8" />
+
 
 I've been making quite a bit of 2d games on godot, when I say quite a bit i mean one or two, decided to step it up a dimension!
 I started off with a kenny 3d platformer starter pack, but ended up making some assets myself, secially like towards the end of the level, such as the spinnycircle laser thing, etc.
