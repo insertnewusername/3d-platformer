@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx30r75acrsj"
-path="res://.godot/imported/magnetic.png-05b9df7dfca4b17a3abb315662343c2b.ctex"
+uid="uid://cwwoe6remcly2"
+path="res://.godot/imported/winscreenbg.png-e28c33e3df52e5140835ad6a8d22b1c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://magnetic.png"
-dest_files=["res://.godot/imported/magnetic.png-05b9df7dfca4b17a3abb315662343c2b.ctex"]
+source_file="res://winscreenbg.png"
+dest_files=["res://.godot/imported/winscreenbg.png-e28c33e3df52e5140835ad6a8d22b1c4.ctex"]
 
 [params]
 

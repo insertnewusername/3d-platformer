@@ -56,4 +56,5 @@ func _on_checkpoint_6_body_entered(body: Node3D) -> void:
 
 func _on_flag_2_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
+		get_tree().change_scene_to_file("res://win.tscn")
 		

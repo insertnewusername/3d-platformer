@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6d33eg6x1k82"
-path.s3tc="res://.godot/imported/tiny_treats_texture_1.png-07133e06c37319b00eca9725c08ee2e4.s3tc.ctex"
+uid="uid://dcifue28g0vci"
+path.s3tc="res://.godot/imported/tiny_treats_grass_texture.png-7daed9dd3c3fc6f68045a7d34b9094ed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tiny_treats_texture_1.png"
-dest_files=["res://.godot/imported/tiny_treats_texture_1.png-07133e06c37319b00eca9725c08ee2e4.s3tc.ctex"]
+source_file="res://objects/tiny_treats_grass_texture.png"
+dest_files=["res://.godot/imported/tiny_treats_grass_texture.png-7daed9dd3c3fc6f68045a7d34b9094ed.s3tc.ctex"]
 
 [params]
 
