@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://vueg0eclctmt"]
 
+[ext_resource type="Texture2D" uid="uid://cwwoe6remcly2" path="res://winscreenbg.png" id="1_47rfs"]
+[ext_resource type="Script" uid="uid://bceihxxndts3k" path="res://scripts/winscreen.gd" id="1_wg0yv"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr7k1"]
 bg_color = Color(0.30852813, 0.47659075, 0.7362028, 1)
 corner_radius_top_left = 16
@@ -37,6 +40,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [node name="Node2D" type="Node2D" unique_id=1663413416]
+script = ExtResource("1_wg0yv")
 
 [node name="Control" type="Control" parent="." unique_id=1987848800]
 layout_mode = 3
@@ -44,14 +48,15 @@ anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=329114666]
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=84797001]
+modulate = Color(0.69803923, 0.827451, 1, 0.79607844)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.49411765, 0.7372549, 0.8509804, 1)
+texture = ExtResource("1_47rfs")
 
 [node name="Label" type="Label" parent="Control" unique_id=1823408772]
 layout_mode = 1
@@ -82,3 +87,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_4xko2")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wplog")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0i86x")
 text = "Play Again"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

@@ -4,6 +4,7 @@ extends Node3D
 
 
 func _ready() -> void:
+	Main.checkpoint_pos = Vector3(0.0, 0.492775, 0.0)
 	print("checkpointpos:", Main.checkpoint_pos)
 	if RenderingServer.get_current_rendering_method() == "gl_compatibility":
 		# Reduce background and sun brightness when using the Compatibility renderer;
@@ -56,5 +57,7 @@ func _on_checkpoint_6_body_entered(body: Node3D) -> void:
 
 func _on_flag_2_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		get_tree().change_scene_to_file("res://win.tscn")
+		get_tree().change_scene_to_file("res://scenes/winscreen.tscn")
+		
+
 		
