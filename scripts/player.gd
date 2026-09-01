@@ -147,14 +147,13 @@ func handle_gravity(delta):
 
 func jump():
 	Audio.play("res://sounds/jump.ogg")
-	print(global_position) 
 
 	gravity = -jump_strength
 
 	model.scale = Vector3(0.5, 1.5, 0.5)
 
 	if jump_single:
-		jump_single = false;
+		jump_single = true; #Infinite junp
 
 # Collecting coins
 

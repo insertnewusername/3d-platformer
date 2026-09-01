@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dtjvjdjl8cs6e" path="res://models/flag.glb" id="9_fw1f5"]
 [ext_resource type="PackedScene" uid="uid://dfpisimsgf5ce" path="res://objects/coin.tscn" id="10_fwhys"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://scripts/hud.gd" id="11_apvpm"]
-[ext_resource type="PackedScene" uid="uid://85ldumyetgou" path="res://objects/brick.tscn" id="12_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="13_drtpy"]
 [ext_resource type="PackedScene" uid="uid://byi40xln0ujpy" path="res://objects/spinnyplatform.tscn" id="13_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="13_jfda3"]
@@ -20,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://sjjopx27f6yj" path="res://objects/colourballs.tscn" id="16_0ld40"]
 [ext_resource type="PackedScene" uid="uid://8crl27syp4yp" path="res://objects/movingplatform.tscn" id="17_gqmmt"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="17_tk810"]
+[ext_resource type="PackedScene" uid="uid://die2kf4o6k8gt" path="res://objects/movinglazerr.tscn" id="17_yc10j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
 size = Vector3(4.6347656, 1, 5.5875244)
@@ -157,15 +157,6 @@ transform = Transform3D(1.56209, -1.37982, 1.71508, 1.97375, 1.80907, -0.342241,
 [node name="cube14" parent="World" unique_id=1442059763 instance=ExtResource("13_drtpy")]
 transform = Transform3D(1.56209, -1.37982, 1.71508, 1.97375, 1.80907, -0.342241, -0.974547, 1.4522, 2.05595, -21.460293, 2.0381904, 3.1464796)
 
-[node name="brick" parent="World" unique_id=1047751477 instance=ExtResource("12_jkv2x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.119135, 1.9857206, -0.08861771)
-
-[node name="brick2" parent="World" unique_id=274104243 instance=ExtResource("12_jkv2x")]
-transform = Transform3D(0.8552648, 0, -0.5181912, 0, 1, 0, 0.5181912, 0, 0.8552648, -6.7635055, 3.2150104, -17.549965)
-
-[node name="brick3" parent="World" unique_id=1831941675 instance=ExtResource("12_jkv2x")]
-transform = Transform3D(0.93908226, 0, 0.34369248, 0, 1, 0, -0.34369248, 0, 0.93908226, -19.034018, 3.215011, -12.660945)
-
 [node name="Fallingplatforms" type="Node3D" parent="World" unique_id=213989774]
 
 [node name="platform-falling" parent="World/Fallingplatforms" unique_id=449689416 instance=ExtResource("9_2fnpo")]
@@ -190,6 +181,7 @@ transform = Transform3D(0.85339606, 0, 0.5212633, 0, 1, 0, -0.5212633, 0, 0.8533
 transform = Transform3D(0.14007136, 0, 0.9901415, 0, 1, 0, -0.9901415, 0, 0.14007136, 11.655643, 9.0879545, -6.013995)
 
 [node name="Checkpoints" type="Node3D" parent="World" unique_id=101236926]
+visible = false
 
 [node name="Checkpoint1" type="Area3D" parent="World/Checkpoints" unique_id=1777955934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.222496, 2.654313, 0)
@@ -204,6 +196,7 @@ mesh = SubResource("BoxMesh_jbj1t")
 
 [node name="Checkpoint2" type="Area3D" parent="World/Checkpoints" unique_id=656652853]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.491734, 3.4279928, -15.511991)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint2" unique_id=1280213009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
@@ -215,6 +208,7 @@ mesh = SubResource("BoxMesh_jbj1t")
 
 [node name="Checkpoint3" type="Area3D" parent="World/Checkpoints" unique_id=2023161129]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.680253, 6.0496426, -23.071901)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint3" unique_id=1625683826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
@@ -226,6 +220,7 @@ mesh = SubResource("BoxMesh_jbj1t")
 
 [node name="Checkpoint4" type="Area3D" parent="World/Checkpoints" unique_id=1224400892]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.277137, 10.02132, -7.328103)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint4" unique_id=1501496830]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
@@ -237,6 +232,7 @@ mesh = SubResource("BoxMesh_jbj1t")
 
 [node name="Checkpoint5" type="Area3D" parent="World/Checkpoints" unique_id=1569293657]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.837507, 10.02132, -7.328103)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint5" unique_id=1554450734]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
@@ -248,6 +244,7 @@ mesh = SubResource("BoxMesh_jbj1t")
 
 [node name="Checkpoint6" type="Area3D" parent="World/Checkpoints" unique_id=1902875477]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.170353, 16.167812, 7.433968)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint6" unique_id=991912051]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
@@ -300,6 +297,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.01568, 15.161062, 7.14151
 
 [node name="platform-grass-large-round6" parent="World" unique_id=1580700231 instance=ExtResource("8_4oh1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.064013, 15.458872, 7.848389)
+
+[node name="laserplatform" parent="World" unique_id=293102863 instance=ExtResource("17_yc10j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.704148, 15.908401, 8.141503)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://die2kf4o6k8gt"]
+
+[ext_resource type="Script" uid="uid://cmulrwmwjqehh" path="res://scripts/lazerbeam.gd" id="1_bbo6d"]
+[ext_resource type="Script" uid="uid://bt7foihx7gmm2" path="res://scripts/lazerbeam_2.gd" id="2_d77h5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nxv8c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bbo6d"]
+albedo_color = Color(0.4509804, 0.63529414, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d77h5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d77h5"]
+albedo_color = Color(1, 0.19817138, 0.14735988, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5r5cw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gwlwg"]
+
+[node name="Node3D" type="Node3D" unique_id=293102863]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1758061714]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1368412587]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
+mesh = SubResource("BoxMesh_nxv8c")
+surface_material_override/0 = SubResource("StandardMaterial3D_bbo6d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1351978665]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
+shape = SubResource("BoxShape3D_d77h5")
+
+[node name="lazerbeam" type="StaticBody3D" parent="." unique_id=177813953]
+transform = Transform3D(-0.040075183, 0, 0, 0, 1, 0, 0, 0, 1, 4.816657, 1.8556223, 0)
+script = ExtResource("1_bbo6d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="lazerbeam" unique_id=1356286758]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
+mesh = SubResource("BoxMesh_nxv8c")
+surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lazerbeam" unique_id=36453567]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
+shape = SubResource("BoxShape3D_d77h5")
+
+[node name="lazerbeam2" type="StaticBody3D" parent="." unique_id=1770226225]
+transform = Transform3D(-0.040075183, 0, 0, 0, 1, 0, 0, 0, 1, 2.5325956, 2.1529498, 0)
+script = ExtResource("2_d77h5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="lazerbeam2" unique_id=604947973]
+transform = Transform3D(-13.769834, 0, 2.8676726e-07, 0, 0.84360945, 0, -1.2037971e-06, 0, -3.280235, 5.3384743, 0, -0.25111103)
+mesh = SubResource("BoxMesh_nxv8c")
+surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lazerbeam2" unique_id=1662055882]
+transform = Transform3D(-13.769834, 0, 2.8676726e-07, 0, 0.84360945, 0, -1.2037971e-06, 0, -3.280235, 5.3384743, 0, -0.25111103)
+shape = SubResource("BoxShape3D_5r5cw")
+
+[node name="lazerbeam3" type="StaticBody3D" parent="." unique_id=312825773]
+transform = Transform3D(-0.040075183, 0, 0, 0, 1, 0, 0, 0, 1, -0.7163143, 1.8556223, 0)
+script = ExtResource("1_bbo6d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="lazerbeam3" unique_id=1726479553]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
+mesh = SubResource("BoxMesh_nxv8c")
+surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lazerbeam3" unique_id=1713304952]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
+shape = SubResource("BoxShape3D_d77h5")
+
+[node name="lazerbeam4" type="StaticBody3D" parent="." unique_id=816308389]
+transform = Transform3D(-0.040075175, 0, -5.562837e-07, 0, -0.9999998, 0, 2.2293166e-08, 0, -1, -3.6520643, 2.1529498, 0)
+script = ExtResource("2_d77h5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="lazerbeam4" unique_id=281105955]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, 5.3384743, 0, -0.25111103)
+mesh = SubResource("BoxMesh_nxv8c")
+surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lazerbeam4" unique_id=1470728953]
+transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, 5.3384743, 0, -0.25111103)
+shape = SubResource("BoxShape3D_gwlwg")
