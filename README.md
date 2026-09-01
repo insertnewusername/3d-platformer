@@ -7,6 +7,7 @@ It uses Godot and stuff, so godotscript ig.
 Demo url: https://insertnewusernamehere.itch.io/jumpy
 
 I've been making quite a bit of 2d games on godot, when I say quite a bit i mean one or two, decided to step it up a dimension!
+I started off with a kenny 3d platformer starter pack, but ended up making some assets myself, secially like towards the end of the level, such as the spinnycircle laser thing, etc.
 
 Features include:
 Jumping, Camera movement, and a finish line, and much more!
