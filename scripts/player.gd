@@ -153,7 +153,7 @@ func jump():
 	model.scale = Vector3(0.5, 1.5, 0.5)
 
 	if jump_single:
-		jump_single = true; #Infinite junp
+		jump_single = false; 
 
 # Collecting coins
 
