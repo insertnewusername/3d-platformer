@@ -246,6 +246,17 @@ shape = SubResource("BoxShape3D_jkv2x")
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
 mesh = SubResource("BoxMesh_jbj1t")
 
+[node name="Checkpoint6" type="Area3D" parent="World/Checkpoints" unique_id=1902875477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.170353, 16.167812, 7.433968)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint6" unique_id=991912051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_jkv2x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint6" unique_id=337204871]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_jbj1t")
+
 [node name="Spinnyplatform" type="Node3D" parent="World" unique_id=459119053]
 
 [node name="platform-grass-large-round" parent="World/Spinnyplatform" unique_id=815574895 instance=ExtResource("13_jbj1t")]
@@ -288,7 +299,7 @@ transform = Transform3D(0.9952359, 0, 0.09749603, 0, 1, 0, -0.09749603, 0, 0.995
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.01568, 15.161062, 7.1415195)
 
 [node name="platform-grass-large-round6" parent="World" unique_id=1580700231 instance=ExtResource("8_4oh1e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.772842, 15.458872, 7.844182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.064013, 15.458872, 7.848389)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
@@ -344,3 +355,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint3" to="." method="_on_checkpoint_3_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint4" to="." method="_on_checkpoint_4_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint5" to="." method="_on_checkpoint_5_body_entered"]
+[connection signal="body_entered" from="World/Checkpoints/Checkpoint6" to="." method="_on_checkpoint_6_body_entered"]
