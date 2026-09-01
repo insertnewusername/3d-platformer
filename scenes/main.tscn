@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://objects/platform_grass_large_round.tscn" id="8_4oh1e"]
 [ext_resource type="PackedScene" uid="uid://c8up71en5djgm" path="res://objects/platform_falling.tscn" id="9_2fnpo"]
 [ext_resource type="PackedScene" uid="uid://dtjvjdjl8cs6e" path="res://models/flag.glb" id="9_fw1f5"]
+[ext_resource type="Script" uid="uid://c18lf77wdgkko" path="res://scripts/flag.gd" id="9_jscy8"]
 [ext_resource type="PackedScene" uid="uid://dfpisimsgf5ce" path="res://objects/coin.tscn" id="10_fwhys"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://scripts/hud.gd" id="11_apvpm"]
 [ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="13_drtpy"]
@@ -20,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://8crl27syp4yp" path="res://objects/movingplatform.tscn" id="17_gqmmt"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="17_tk810"]
 [ext_resource type="PackedScene" uid="uid://die2kf4o6k8gt" path="res://objects/movinglazerr.tscn" id="17_yc10j"]
+[ext_resource type="PackedScene" uid="uid://b1shqm2pmcii4" path="res://objects/finishplat.tscn" id="19_pm3ni"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
 size = Vector3(4.6347656, 1, 5.5875244)
@@ -92,7 +94,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.742756, 2.7519, -15.11372
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.226477, 2.1200309, 0.3867607)
 
 [node name="flag" parent="World" unique_id=878203124 instance=ExtResource("9_fw1f5")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 3.48077, -6)
+transform = Transform3D(0.7071067, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.7071067, -0.016493067, 17.382303, 8.538197)
+script = ExtResource("9_jscy8")
 
 [node name="coin" parent="World" unique_id=1599954285 instance=ExtResource("10_fwhys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.635, 0)
@@ -300,6 +303,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.064013, 15.458872, 7.8483
 
 [node name="laserplatform" parent="World" unique_id=293102863 instance=ExtResource("17_yc10j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.704148, 15.908401, 8.141503)
+
+[node name="FINISHLINE" parent="World" unique_id=775873244 instance=ExtResource("19_pm3ni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38038942, 17.164448, 8.389587)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)

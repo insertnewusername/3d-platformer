@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b1shqm2pmcii4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j731o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn08b"]
+albedo_color = Color(0.50980395, 1, 0.5137255, 1)
+
+[node name="Node3D" type="Node3D" unique_id=775873244]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1714490800]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1308579953]
+transform = Transform3D(5.446189, 0, 0, 0, 0.4697497, 0, 0, 0, 5.950816, 0, 0, 0)
+mesh = SubResource("BoxMesh_j731o")
+surface_material_override/0 = SubResource("StandardMaterial3D_gn08b")
