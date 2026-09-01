@@ -52,3 +52,8 @@ func _on_checkpoint_6_body_entered(body: Node3D) -> void:
 			Main.checkpoint_pos = Vector3(-21.13077, 15.90975, 7.940919)
 
 			print("checkpoint changed to", Main.checkpoint_pos)
+
+
+func _on_flag_2_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		
