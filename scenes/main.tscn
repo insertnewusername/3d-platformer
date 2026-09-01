@@ -279,7 +279,16 @@ transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-
 transform = Transform3D(0.99523616, 0, 0.09749606, 0, 1, 0, -0.09749606, 0, 0.99523616, -40.77133, 15.129306, -10.961243)
 
 [node name="Sliding platform" parent="World" unique_id=483386934 instance=ExtResource("17_gqmmt")]
-transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -40.46242, 15.078155, -7.0955896)
+transform = Transform3D(0.122111864, 0, -0.9925162, 0, 1, 0, 0.9925162, 0, 0.122111864, -40.462082, 15.078155, -7.386068)
+
+[node name="platform-medium6" parent="World" unique_id=1220929644 instance=ExtResource("7_ixpj3")]
+transform = Transform3D(0.9952359, 0, 0.09749603, 0, 1, 0, -0.09749603, 0, 0.9952359, -40.792297, 15.129306, 7.5295887)
+
+[node name="Sliding platform2" parent="World" unique_id=2065706671 instance=ExtResource("17_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.01568, 15.161062, 7.1415195)
+
+[node name="platform-grass-large-round6" parent="World" unique_id=1580700231 instance=ExtResource("8_4oh1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.772842, 15.458872, 7.844182)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
