@@ -30,7 +30,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bbo6d")
 transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
 shape = SubResource("BoxShape3D_d77h5")
 
-[node name="lazerbeam" type="StaticBody3D" parent="." unique_id=177813953]
+[node name="lazerbeam" type="Area3D" parent="." unique_id=1548991207]
 transform = Transform3D(-0.040075183, 0, 0, 0, 1, 0, 0, 0, 1, 4.816657, 1.8556223, 0)
 script = ExtResource("1_bbo6d")
 
@@ -43,7 +43,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
 transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
 shape = SubResource("BoxShape3D_d77h5")
 
-[node name="lazerbeam2" type="StaticBody3D" parent="." unique_id=1770226225]
+[node name="lazerbeam2" type="Area3D" parent="." unique_id=692428296]
 transform = Transform3D(-0.040075183, 0, 0, 0, 1, 0, 0, 0, 1, 2.5325956, 2.1529498, 0)
 script = ExtResource("2_d77h5")
 
@@ -56,7 +56,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
 transform = Transform3D(-13.769834, 0, 2.8676726e-07, 0, 0.84360945, 0, -1.2037971e-06, 0, -3.280235, 5.3384743, 0, -0.25111103)
 shape = SubResource("BoxShape3D_5r5cw")
 
-[node name="lazerbeam3" type="StaticBody3D" parent="." unique_id=312825773]
+[node name="lazerbeam3" type="Area3D" parent="." unique_id=113638382]
 transform = Transform3D(-0.040075183, 0, 0, 0, 1, 0, 0, 0, 1, -0.7163143, 1.8556223, 0)
 script = ExtResource("1_bbo6d")
 
@@ -69,7 +69,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
 transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, -0.17298889, 0, -0.25111103)
 shape = SubResource("BoxShape3D_d77h5")
 
-[node name="lazerbeam4" type="StaticBody3D" parent="." unique_id=816308389]
+[node name="lazerbeam4" type="Area3D" parent="." unique_id=36844030]
 transform = Transform3D(-0.040075175, 0, -5.562837e-07, 0, -0.9999998, 0, 2.2293166e-08, 0, -1, -3.6520643, 2.1529498, 0)
 script = ExtResource("2_d77h5")
 
@@ -81,3 +81,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_d77h5")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="lazerbeam4" unique_id=1470728953]
 transform = Transform3D(13.769834, 0, 0, 0, 0.84360945, 0, 0, 0, 3.280235, 5.3384743, 0, -0.25111103)
 shape = SubResource("BoxShape3D_gwlwg")
+
+[connection signal="body_entered" from="lazerbeam" to="lazerbeam" method="_on_body_entered"]
+[connection signal="body_entered" from="lazerbeam2" to="lazerbeam2" method="_on_body_entered"]
+[connection signal="body_entered" from="lazerbeam3" to="lazerbeam3" method="_on_body_entered"]
+[connection signal="body_entered" from="lazerbeam4" to="lazerbeam4" method="_on_body_entered"]

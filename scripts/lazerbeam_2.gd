@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Area3D
 
 var speed := 2.0        # how fast it moves
 var amplitude := 1.0    # how far up/down it moves
@@ -11,3 +11,8 @@ func _process(delta):
 	var t = Time.get_ticks_msec() / 1000.0
 	var new_y = base_y + sin(t * speed) * amplitude * -1
 	global_transform.origin.y = new_y
+
+
+func _on_body_entered(body: Node3D) -> void:
+		if body.name=="Player":
+			body.die()
