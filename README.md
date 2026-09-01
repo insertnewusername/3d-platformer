@@ -12,10 +12,10 @@ I started off with a kenny 3d platformer starter pack, but ended up making some 
 Features include:
 Jumping, Camera movement, and a finish line, and much more!
 
-Movements:
-WASD - Move forward, etc
-Arrow keys - Move camera
-Spacebar - What do you think this does genius?
+Movements:<br>
+WASD - Move forward, etc <br>
+Arrow keys - Move camera<br>
+Spacebar - What do you think this does genius?<br>
 
 That's probably all you need to know for controls
 
