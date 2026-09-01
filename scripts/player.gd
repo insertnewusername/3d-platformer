@@ -7,7 +7,7 @@ signal coin_collected
 
 @export_subgroup("Properties")
 @export var movement_speed = 250
-@export var jump_strength = 7
+@export var jump_strength = 14
 
 var movement_velocity: Vector3
 var rotation_direction: float
@@ -16,7 +16,6 @@ var gravity = 0
 var previously_floored = false
 
 var jump_single = true
-var jump_double = true
 
 var coins = 0
 
@@ -130,9 +129,7 @@ func handle_controls(delta):
 
 	# Jumping
 	if Input.is_action_just_pressed("jump"):
-		jump()
-	if Input.is_action_just_pressed("jump"):
-		if jump_single or jump_double:
+		if jump_single:
 			jump()
 
 # Handle gravity
@@ -157,9 +154,6 @@ func jump():
 
 	if jump_single:
 		jump_single = false;
-		jump_double = true;
-	else:
-		jump_double = false;
 
 # Collecting coins
 
