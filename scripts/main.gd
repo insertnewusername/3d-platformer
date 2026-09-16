@@ -61,3 +61,7 @@ func _on_flag_2_body_entered(body: Node3D) -> void:
 		
 
 		
+
+
+func _on_checkpoint_7_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.
