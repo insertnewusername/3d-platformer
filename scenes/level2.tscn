@@ -21,10 +21,14 @@
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="21_go57r"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="22_58bux"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s4es8"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_63e4f"]
 size = Vector3(4.6347656, 1, 5.5875244)
 
-[sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
+[sub_resource type="BoxMesh" id="BoxMesh_ekhvm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_24ks5"]
 size = Vector3(0.571, 0.375, 1.125)
@@ -68,7 +72,7 @@ transform = Transform3D(0.96623695, 0, -0.25765598, 0, 1, 0, 0.25765598, 0, 0.96
 transform = Transform3D(0.996134, 0, 0.08785119, 0, 1, 0, -0.08785119, 0, 0.996134, -4.1096964, 0, 8.205832)
 
 [node name="platform-grass-large-round" parent="World" unique_id=1637479868 instance=ExtResource("7_ttvjw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.249893, 2.7519, -4.197688)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.81889, 1.6090124, 0.72940636)
 
 [node name="platform-grass-large-round2" parent="World" unique_id=1630638152 instance=ExtResource("7_ttvjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34585238, -0.19823265, -0.28131446)
@@ -99,13 +103,24 @@ transform = Transform3D(1.56209, -1.37982, 1.71508, 1.97375, 1.80907, -0.342241,
 [node name="Checkpoint7" type="Area3D" parent="World/Checkpoints" unique_id=1300619896]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.222496, 2.654313, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint7" unique_id=1504456529]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
-shape = SubResource("BoxShape3D_63e4f")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint7" unique_id=199231000]
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 2.0954758e-09, 0, 4.2540417, 17.764372, -2.428555, -0.5534542)
 mesh = SubResource("BoxMesh_y6lc1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint7" unique_id=2126788762]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 2.0954758e-09, 0, 4.2540417, 17.764372, -2.428555, -0.5534542)
+shape = SubResource("BoxShape3D_s4es8")
+
+[node name="Checkpoint8" type="Area3D" parent="World/Checkpoints" unique_id=1011791238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.71024, 2.151013, 0.35879487)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint8" unique_id=264435379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_63e4f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint8" unique_id=372440195]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_ekhvm")
 
 [node name="Spinnyplatform" type="Node3D" parent="World" unique_id=459119053]
 
@@ -301,4 +316,5 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
+[connection signal="body_entered" from="World/Checkpoints/Checkpoint8" to="." method="_on_checkpoint_8_body_entered"]
 [connection signal="body_entered" from="World/flag2" to="." method="_on_flag_2_body_entered"]

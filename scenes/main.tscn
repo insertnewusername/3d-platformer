@@ -180,7 +180,6 @@ transform = Transform3D(0.85339606, 0, 0.5212633, 0, 1, 0, -0.5212633, 0, 0.8533
 transform = Transform3D(0.14007136, 0, 0.9901415, 0, 1, 0, -0.9901415, 0, 0.14007136, 11.655643, 9.0879545, -6.013995)
 
 [node name="Checkpoints" type="Node3D" parent="World" unique_id=101236926]
-visible = false
 
 [node name="Checkpoint1" type="Area3D" parent="World/Checkpoints" unique_id=1777955934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.222496, 2.654313, 0)
