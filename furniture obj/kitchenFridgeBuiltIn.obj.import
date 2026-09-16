@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://de7fdq32es7el"
+path="res://.godot/imported/kitchenFridgeBuiltIn.obj-3b31c351bbe44b534be7f81bf9232aba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchenFridgeBuiltIn.obj-3b31c351bbe44b534be7f81bf9232aba.mesh"]
+
+source_file="res://furniture obj/kitchenFridgeBuiltIn.obj"
+dest_files=["res://.godot/imported/kitchenFridgeBuiltIn.obj-3b31c351bbe44b534be7f81bf9232aba.mesh", "res://.godot/imported/kitchenFridgeBuiltIn.obj-3b31c351bbe44b534be7f81bf9232aba.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

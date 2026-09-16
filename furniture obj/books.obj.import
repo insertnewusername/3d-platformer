@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://22723o65txxj"
+path="res://.godot/imported/books.obj-a97cb7aad987d6e7fd42274fec1afec2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/books.obj-a97cb7aad987d6e7fd42274fec1afec2.mesh"]
+
+source_file="res://furniture obj/books.obj"
+dest_files=["res://.godot/imported/books.obj-a97cb7aad987d6e7fd42274fec1afec2.mesh", "res://.godot/imported/books.obj-a97cb7aad987d6e7fd42274fec1afec2.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
