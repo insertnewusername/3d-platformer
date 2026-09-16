@@ -74,10 +74,10 @@ text = "Choose level"
 
 [node name="Button" type="Button" parent="Control" unique_id=131505593]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 471.0
-offset_right = 499.0
-offset_bottom = 597.0
+offset_left = 97.0
+offset_top = 482.0
+offset_right = 534.0
+offset_bottom = 608.0
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_vttqt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4kdbh")

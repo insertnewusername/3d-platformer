@@ -150,6 +150,17 @@ shape = SubResource("BoxShape3D_63e4f")
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
 mesh = SubResource("BoxMesh_ekhvm")
 
+[node name="Checkpoint9" type="Area3D" parent="World/Checkpoints" unique_id=58378026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.297104, 8.05113, -19.771862)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint9" unique_id=166145158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_63e4f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint9" unique_id=1827035230]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_ekhvm")
+
 [node name="platform-grass-large-round3" parent="World" unique_id=479731932 instance=ExtResource("7_ttvjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.644616, 7.320979, -22.493914)
 
