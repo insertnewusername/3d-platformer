@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dxmix18v26tji" path="res://objects/bigspinnyplatform.tscn" id="11_3xffc"]
 [ext_resource type="PackedScene" uid="uid://basroaq05ewmh" path="res://objects/mysteryfloor.tscn" id="12_icuov"]
 [ext_resource type="PackedScene" uid="uid://b1shqm2pmcii4" path="res://objects/finishplat.tscn" id="16_4vsvd"]
+[ext_resource type="ArrayMesh" uid="uid://hn8o0d5wt3q1" path="res://furniture obj/bedSingle.obj" id="17_24ks5"]
 [ext_resource type="PackedScene" uid="uid://8xq3k5gyl27o" path="res://objects/flag.tscn" id="17_ehxya"]
 [ext_resource type="Script" uid="uid://c18lf77wdgkko" path="res://scripts/flag.gd" id="18_tn25f"]
 [ext_resource type="PackedScene" uid="uid://dfpisimsgf5ce" path="res://objects/coin.tscn" id="19_5b1db"]
@@ -24,6 +25,9 @@
 size = Vector3(4.6347656, 1, 5.5875244)
 
 [sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_24ks5"]
+size = Vector3(0.571, 0.375, 1.125)
 
 [sub_resource type="LabelSettings" id="LabelSettings_38ys3"]
 font = ExtResource("22_58bux")
@@ -205,6 +209,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.89494, 14.109476, -9.6584
 
 [node name="coin15" parent="World/Coins" unique_id=710823460 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.553867, 19.438326, 7.908927)
+
+[node name="beds" type="Node3D" parent="World" unique_id=1243479698]
+
+[node name="bed1" type="StaticBody3D" parent="World/beds" unique_id=198638756]
+
+[node name="BedSingle" type="MeshInstance3D" parent="World/beds/bed1" unique_id=310883118]
+transform = Transform3D(2.999998, 0, -0.0034033912, 0, 3, 0, 0.0034033912, 0, 2.999998, -3.771246, 0.74380624, -0.30672446)
+mesh = ExtResource("17_24ks5")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/beds/bed1" unique_id=1823571123]
+transform = Transform3D(2.999998, 0, -0.0034033912, 0, 3, 0, 0.0034033912, 0, 2.999998, -5.7846594, 1.3063062, 1.3784925)
+shape = SubResource("BoxShape3D_24ks5")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
