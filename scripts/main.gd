@@ -60,8 +60,8 @@ func _on_flag_2_body_entered(body: Node3D) -> void:
 		get_tree().change_scene_to_file("res://scenes/winscreen.tscn")
 		
 
-		
-
 
 func _on_checkpoint_7_body_entered(body: Node3D) -> void:
-	pass # Replace with function body.
+	if body.name == "Player":
+		Main.checkpoint_pos = Vector3(0.0, 0.492775, 0.0)
+		print("checkpoint changed to", Main.checkpoint_pos)
