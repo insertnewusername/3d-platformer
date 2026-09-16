@@ -243,7 +243,7 @@ transform = Transform3D(7.7887235, 0, -1.2006075, 0, 3, 0, -0.45775965, 0, -2.96
 shape = SubResource("BoxShape3D_s4es8")
 
 [node name="bed3" type="StaticBody3D" parent="World/beds" unique_id=278780576]
-transform = Transform3D(-0.34940687, 0, 0.39628598, 0, 1, 0, 0.15109329, 0, 0.91642094, -18.131634, 0, 3.1873925)
+transform = Transform3D(-0.34940684, 0, 0.39628595, 0, 1, 0, 0.15109327, 0, 0.9164209, -22.436258, 0, 3.182509)
 
 [node name="BedSingle" type="MeshInstance3D" parent="World/beds/bed3" unique_id=765269385]
 transform = Transform3D(7.788724, 0, -1.2006077, 0, 3, 0, -0.45775962, 0, -2.9696326, 18.192585, 0.74380624, -2.7406592)
@@ -264,6 +264,17 @@ transform = Transform3D(4, -5.3290705e-15, 0, -4.7614094e-15, -4, 6.039832e-07, 
 mesh = ExtResource("18_s4es8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Chairs/chair1" unique_id=1060012559]
+transform = Transform3D(4, -5.3290705e-15, 0, -4.7614094e-15, -4, 6.039832e-07, 0, -6.0398315e-07, -4, -0.68694687, -0.5314877, -0.4039889)
+shape = SubResource("ConcavePolygonShape3D_63e4f")
+
+[node name="chair2" type="StaticBody3D" parent="World/Chairs" unique_id=1050159301]
+transform = Transform3D(0.5509905, 4.8169106e-08, 0.8345115, 8.742278e-08, -1, 0, 0.8345115, 7.2955295e-08, -0.5509905, -21.126368, 0.30234694, 1.4527911)
+
+[node name="ChairDesk" type="MeshInstance3D" parent="World/Chairs/chair2" unique_id=200142198]
+transform = Transform3D(4, -5.3290705e-15, 0, -4.7614094e-15, -4, 6.039832e-07, 0, -6.0398315e-07, -4, -0.68694687, -0.5314877, -0.4039889)
+mesh = ExtResource("18_s4es8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Chairs/chair2" unique_id=768282166]
 transform = Transform3D(4, -5.3290705e-15, 0, -4.7614094e-15, -4, 6.039832e-07, 0, -6.0398315e-07, -4, -0.68694687, -0.5314877, -0.4039889)
 shape = SubResource("ConcavePolygonShape3D_63e4f")
 
