@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://objects/platform_medium.tscn" id="6_cgqhq"]
 [ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://objects/platform_grass_large_round.tscn" id="7_ttvjw"]
 [ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="8_ac7c3"]
-[ext_resource type="PackedScene" uid="uid://byi40xln0ujpy" path="res://objects/spinnyplatform.tscn" id="10_odav0"]
-[ext_resource type="PackedScene" uid="uid://dxmix18v26tji" path="res://objects/bigspinnyplatform.tscn" id="11_3xffc"]
 [ext_resource type="PackedScene" uid="uid://basroaq05ewmh" path="res://objects/mysteryfloor.tscn" id="12_icuov"]
 [ext_resource type="PackedScene" uid="uid://b1shqm2pmcii4" path="res://objects/finishplat.tscn" id="16_4vsvd"]
 [ext_resource type="ArrayMesh" uid="uid://hn8o0d5wt3q1" path="res://furniture obj/bedSingle.obj" id="17_24ks5"]
@@ -125,20 +123,6 @@ shape = SubResource("BoxShape3D_63e4f")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint8" unique_id=372440195]
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
 mesh = SubResource("BoxMesh_ekhvm")
-
-[node name="Spinnyplatform" type="Node3D" parent="World" unique_id=459119053]
-
-[node name="platform-grass-large-round" parent="World/Spinnyplatform" unique_id=815574895 instance=ExtResource("10_odav0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.620451, 4.772543, -23.550697)
-
-[node name="platform-grass-large-round2" parent="World/Spinnyplatform" unique_id=1667346809 instance=ExtResource("10_odav0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.45089, 5.237165, -21.713608)
-
-[node name="platform-grass-large-round3" parent="World/Spinnyplatform" unique_id=1156158097 instance=ExtResource("11_3xffc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.484683, 6.123755, -21.770039)
-
-[node name="platform-grass-large-round4" parent="World/Spinnyplatform" unique_id=1344623773 instance=ExtResource("11_3xffc")]
-transform = Transform3D(0.97314674, 0, 0.23018563, 0, 1, 0, -0.23018563, 0, 0.97314674, 14.828803, 6.5856547, -18.0849)
 
 [node name="platform-grass-large-round3" parent="World" unique_id=479731932 instance=ExtResource("7_ttvjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6803885, 5.75307, -22.50563)
@@ -281,6 +265,30 @@ mesh = ExtResource("18_63e4f")
 skeleton = NodePath("../../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/keyboard/keyboard1" unique_id=1610960440]
+transform = Transform3D(1, 0, -7.761022e-11, 0, 1, 0, 7.761022e-11, 0, 1, -0.14110072, 0.013778, 0.059095986)
+shape = SubResource("BoxShape3D_y6lc1")
+
+[node name="keyboard2" type="StaticBody3D" parent="World/keyboard" unique_id=1881727716]
+transform = Transform3D(11.869273, 0, -1.7664632, 0, 12, 0, 1.7664632, 0, 11.869273, -32.443123, 3.0424104, -11.722843)
+
+[node name="ComputerKeyboard" type="MeshInstance3D" parent="World/keyboard/keyboard2" unique_id=250870431]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -7.1525574e-07, 0.06685552, 0)
+mesh = ExtResource("18_63e4f")
+skeleton = NodePath("../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/keyboard/keyboard2" unique_id=1217599491]
+transform = Transform3D(1, 0, -7.761022e-11, 0, 1, 0, 7.761022e-11, 0, 1, -0.14110072, 0.013778, 0.059095986)
+shape = SubResource("BoxShape3D_y6lc1")
+
+[node name="keyboard3" type="StaticBody3D" parent="World/keyboard" unique_id=1866922661]
+transform = Transform3D(11.869273, 0, -1.7664629, 0, 12, 0, 1.7664629, 0, 11.869273, -30.963717, 3.0424104, -17.566126)
+
+[node name="ComputerKeyboard" type="MeshInstance3D" parent="World/keyboard/keyboard3" unique_id=2001560138]
+transform = Transform3D(0.9394477, 0, -0.34269246, 0, 1, 0, 0.34269246, 0, 0.9394477, -4.7683716e-07, 0.14479563, -1.1920929e-07)
+mesh = ExtResource("18_63e4f")
+skeleton = NodePath("../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/keyboard/keyboard3" unique_id=1556406998]
 transform = Transform3D(1, 0, -7.761022e-11, 0, 1, 0, 7.761022e-11, 0, 1, -0.14110072, 0.013778, 0.059095986)
 shape = SubResource("BoxShape3D_y6lc1")
 
