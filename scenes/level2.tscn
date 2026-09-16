@@ -22,6 +22,14 @@
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://scripts/hud.gd" id="20_etc3t"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="21_go57r"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="22_58bux"]
+[ext_resource type="ArrayMesh" uid="uid://dk5hxi6jx0fje" path="res://furniture obj/kitchenMicrowave.obj" id="23_qo7hg"]
+[ext_resource type="ArrayMesh" uid="uid://coykqgn7o0v2i" path="res://furniture obj/laptop.obj" id="24_odav0"]
+[ext_resource type="ArrayMesh" uid="uid://dtvq2y8pfhhww" path="res://furniture obj/loungeChair.obj" id="25_3xffc"]
+[ext_resource type="ArrayMesh" uid="uid://b6hbgpxgd2bwp" path="res://furniture obj/loungeDesignSofa.obj" id="26_icuov"]
+[ext_resource type="ArrayMesh" uid="uid://clcnd65vl4wdm" path="res://furniture obj/pillowBlue.obj" id="27_xnv6s"]
+[ext_resource type="ArrayMesh" uid="uid://df0wtrsdh1lfh" path="res://furniture obj/radio.obj" id="28_6lk74"]
+[ext_resource type="ArrayMesh" uid="uid://6e3prkljvcff" path="res://furniture obj/speaker.obj" id="29_wso6h"]
+[ext_resource type="ArrayMesh" uid="uid://7iuxm061evpq" path="res://furniture obj/sideTableDrawers.obj" id="30_4vsvd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
 
@@ -143,7 +151,7 @@ transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066,
 mesh = SubResource("BoxMesh_ekhvm")
 
 [node name="platform-grass-large-round3" parent="World" unique_id=479731932 instance=ExtResource("7_ttvjw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6803885, 5.75307, -22.50563)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.644616, 7.320979, -22.493914)
 
 [node name="platform-grass-large-round4" parent="World" unique_id=1918797815 instance=ExtResource("7_ttvjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2846107, 9.563549, -6.9510756)
@@ -152,7 +160,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2846107, 9.563549, -6.95107
 transform = Transform3D(-2.8441358e-08, 0, 0.90337473, 0, 0.3707991, 0, -0.6506624, 0, -3.9487762e-08, -0.3133316, 9.995807, -6.9991884)
 
 [node name="platform-grass-large-round5" parent="World" unique_id=424418027 instance=ExtResource("7_ttvjw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.862707, 9.563549, -6.9510756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.147781, 7.7495995, -19.263874)
 
 [node name="platform-grass-large-round6" parent="World" unique_id=1580700231 instance=ExtResource("7_ttvjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.064013, 15.458872, 7.848389)
@@ -381,6 +389,38 @@ offset_bottom = 123.0
 text = "0"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
+
+[node name="KitchenMicrowave" type="MeshInstance3D" parent="." unique_id=152257684]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -17.050804, 8.249599, -20.18338)
+mesh = ExtResource("23_qo7hg")
+
+[node name="Laptop" type="MeshInstance3D" parent="." unique_id=415250201]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -17.288864, 8.249599, -21.246334)
+mesh = ExtResource("24_odav0")
+
+[node name="LoungeChair" type="MeshInstance3D" parent="." unique_id=513675928]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -18.00858, 8.249599, -20.800861)
+mesh = ExtResource("25_3xffc")
+
+[node name="LoungeDesignSofa" type="MeshInstance3D" parent="." unique_id=859216590]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -15.940175, 8.249599, -19.782505)
+mesh = ExtResource("26_icuov")
+
+[node name="PillowBlue" type="MeshInstance3D" parent="." unique_id=1736104866]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -16.580507, 8.249599, -20.80584)
+mesh = ExtResource("27_xnv6s")
+
+[node name="Radio" type="MeshInstance3D" parent="." unique_id=1773795921]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -16.8251, 8.249599, -21.25724)
+mesh = ExtResource("28_6lk74")
+
+[node name="Speaker" type="MeshInstance3D" parent="." unique_id=1114153676]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -17.855816, 8.249599, -21.065176)
+mesh = ExtResource("29_wso6h")
+
+[node name="SideTableDrawers" type="MeshInstance3D" parent="." unique_id=1900770919]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -16.575563, 8.249599, -20.915535)
+mesh = ExtResource("30_4vsvd")
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
