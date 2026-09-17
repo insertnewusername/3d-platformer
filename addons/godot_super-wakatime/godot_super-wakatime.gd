@@ -1,6 +1,7 @@
 @tool
 extends EditorPlugin
 
+const DataSnapshot = preload("res://addons/godot_super-wakatime/data_snapshot.gd")
 
 #------------------------------- SETUP -------------------------------
 # Utilities
@@ -51,16 +52,9 @@ func _exit_tree() -> void:
 	_disable_plugin()
 	set_process(false)
 	
-	
-class DataSnapshot:
-	var file_path: String
-	var line_no: int 
-	var cursor_pos: int 
-	var lines: int 
-
 
 func get_coding_data(file: Script = null) ->  DataSnapshot:
-	var snapshot = DataSnapshot.new()
+	var snapshot := DataSnapshot.new()
 	if not file:
 		file = get_editor_interface().get_script_editor().get_current_script()
 
