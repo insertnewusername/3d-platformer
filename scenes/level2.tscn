@@ -485,7 +485,7 @@ transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 
 mesh = ExtResource("25_3xffc")
 
 [node name="LoungeDesignSofa" type="MeshInstance3D" parent="." unique_id=859216590]
-transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -15.940175, 8.249599, -19.782505)
+transform = Transform3D(0.44030526, 0, -1.9509305, 0, 2, 0, 1.9509305, 0, 0.44030526, -4.2491403, 15.852596, -1.6159507)
 mesh = ExtResource("26_icuov")
 
 [node name="PillowBlue" type="MeshInstance3D" parent="." unique_id=1736104866]
