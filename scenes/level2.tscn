@@ -105,7 +105,7 @@ fov = 40.0
 transform = Transform3D(0.9662364, 0, -0.2576557, 0, 1, 0, 0.2576557, 0, 0.9662364, -30.520548, 6.016974, -20.117094)
 
 [node name="platform-medium" parent="World" unique_id=1269502386 instance=ExtResource("6_cgqhq")]
-transform = Transform3D(0.996134, 0, 0.08785119, 0, 1, 0, -0.08785119, 0, 0.996134, -4.1096964, 0, 8.205832)
+transform = Transform3D(0.996134, 0, 0.08785119, 0, 1, 0, -0.08785119, 0, 0.996134, -20.695057, 19.03851, -4.467173)
 
 [node name="platform-grass-large-round" parent="World" unique_id=1637479868 instance=ExtResource("7_ttvjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.81889, 1.6090124, 0.72940636)
@@ -452,6 +452,30 @@ mesh = ExtResource("26_icuov")
 skeleton = NodePath("../../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/laptop/lounge2" unique_id=1345128598]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.13537121, 0)
+shape = SubResource("ConcavePolygonShape3D_icuov")
+
+[node name="lounge3" type="StaticBody3D" parent="World/laptop" unique_id=57179062]
+transform = Transform3D(-0.88683015, 0, -1.7926323, 0, 2, 0, 1.7926323, 0, -0.88683015, -11.709392, 17.092945, -3.1626687)
+
+[node name="LoungeDesignSofa" type="MeshInstance3D" parent="World/laptop/lounge3" unique_id=137098439]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.13537121, 0)
+mesh = ExtResource("26_icuov")
+skeleton = NodePath("../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/laptop/lounge3" unique_id=511806632]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.13537121, 0)
+shape = SubResource("ConcavePolygonShape3D_icuov")
+
+[node name="lounge4" type="StaticBody3D" parent="World/laptop" unique_id=656924655]
+transform = Transform3D(-0.815111, 0.78878146, -1.6472448, 0.34895554, 1.8378854, 0.7073944, 1.7927135, 0.0008948447, -0.8866651, -15.285779, 17.91715, -3.1667252)
+
+[node name="LoungeDesignSofa" type="MeshInstance3D" parent="World/laptop/lounge4" unique_id=827152268]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.13537121, 0)
+mesh = ExtResource("26_icuov")
+skeleton = NodePath("../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/laptop/lounge4" unique_id=176994677]
 transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.13537121, 0)
 shape = SubResource("ConcavePolygonShape3D_icuov")
 
