@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://l0tc2fb2lmld"]
 
+[ext_resource type="Script" uid="uid://5tuoumb334cg" path="res://scripts/levelselect.gd" id="1_nqy8e"]
 [ext_resource type="Texture2D" uid="uid://cwwoe6remcly2" path="res://winscreenbg.png" id="1_xuh2y"]
 [ext_resource type="Texture2D" uid="uid://mv0iiwmt0q5v" path="res://level1.png" id="2_vttqt"]
 [ext_resource type="Texture2D" uid="uid://dtf33dlgvfypp" path="res://level2.png" id="3_4kdbh"]
@@ -41,6 +42,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [node name="Node2D" type="Node2D" unique_id=1316624753]
+script = ExtResource("1_nqy8e")
 
 [node name="Control" type="Control" parent="." unique_id=554366506]
 layout_mode = 3
@@ -74,7 +76,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 128
 text = "Choose level"
 
-[node name="Button" type="Button" parent="Control" unique_id=131505593]
+[node name="level1" type="Button" parent="Control" unique_id=131505593]
 layout_mode = 0
 offset_left = 94.0
 offset_top = 547.0
@@ -88,7 +90,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6rap8")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_aaiik")
 text = "Level 1"
 
-[node name="Button2" type="Button" parent="Control" unique_id=991351201]
+[node name="level2" type="Button" parent="Control" unique_id=991351201]
 layout_mode = 0
 offset_left = 710.0
 offset_top = 550.0
@@ -125,3 +127,6 @@ offset_right = -133.0
 offset_bottom = -159.0
 texture = ExtResource("3_4kdbh")
 expand_mode = 1
+
+[connection signal="pressed" from="Control/level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Control/level2" to="." method="_on_level_2_pressed"]
