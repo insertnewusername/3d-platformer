@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://l0tc2fb2lmld"]
 
 [ext_resource type="Texture2D" uid="uid://cwwoe6remcly2" path="res://winscreenbg.png" id="1_xuh2y"]
+[ext_resource type="Texture2D" uid="uid://mv0iiwmt0q5v" path="res://level1.png" id="2_vttqt"]
+[ext_resource type="Texture2D" uid="uid://dtf33dlgvfypp" path="res://level2.png" id="3_4kdbh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vttqt"]
 bg_color = Color(0.30852813, 0.47659075, 0.7362028, 1)
@@ -63,10 +65,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -371.0
-offset_top = -322.0
-offset_right = 405.0
-offset_bottom = -147.0
+offset_left = -377.0
+offset_top = -340.0
+offset_right = 399.0
+offset_bottom = -165.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 128
@@ -74,10 +76,10 @@ text = "Choose level"
 
 [node name="Button" type="Button" parent="Control" unique_id=131505593]
 layout_mode = 0
-offset_left = 97.0
-offset_top = 482.0
-offset_right = 534.0
-offset_bottom = 608.0
+offset_left = 94.0
+offset_top = 547.0
+offset_right = 531.0
+offset_bottom = 673.0
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_vttqt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4kdbh")
@@ -89,9 +91,9 @@ text = "Level 1"
 [node name="Button2" type="Button" parent="Control" unique_id=991351201]
 layout_mode = 0
 offset_left = 710.0
-offset_top = 472.0
+offset_top = 550.0
 offset_right = 1147.0
-offset_bottom = 598.0
+offset_bottom = 676.0
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_vttqt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4kdbh")
@@ -99,3 +101,27 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_nqy8e")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6rap8")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_aaiik")
 text = "Level 2"
+
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=1499630502]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 98.0
+offset_top = 232.0
+offset_right = -750.0
+offset_bottom = -165.0
+texture = ExtResource("2_vttqt")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Control" unique_id=1875395867]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 711.0
+offset_top = 238.0
+offset_right = -133.0
+offset_bottom = -159.0
+texture = ExtResource("3_4kdbh")
+expand_mode = 1
