@@ -20,4 +20,11 @@ func _on_level_2_pressed() -> void:
 
 
 func _on_button_pressed() -> void:
+	$Control/fadetransition.show()
+	$Control/fadetransition/fade_timer.start()
+	$Control/fadetransition/AnimationPlayer.play("fadeout")
+	
+
+
+func _on_fade_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://scenes/levelselect.tscn")

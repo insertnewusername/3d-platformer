@@ -679,7 +679,9 @@ mesh = ExtResource("30_4vsvd")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=176477315]
 visible = false
 
-[node name="ColorRect" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("33_icuov")]
+[node name="fadetransition" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("33_icuov")]
+
+[node name="fade_timer" type="Timer" parent="CanvasLayer/fadetransition" unique_id=591809315]
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
@@ -689,3 +691,4 @@ visible = false
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint11" to="." method="_on_checkpoint_11_body_entered"]
 [connection signal="body_entered" from="World/flag2" to="." method="_on_flag_2_body_entered"]
 [connection signal="body_entered" from="World/sebby/trashcan" to="." method="_on_trashcan_body_entered"]
+[connection signal="timeout" from="CanvasLayer/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]

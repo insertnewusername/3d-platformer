@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwwoe6remcly2" path="res://winscreenbg.png" id="1_47rfs"]
 [ext_resource type="Script" uid="uid://bceihxxndts3k" path="res://scripts/winscreen.gd" id="1_wg0yv"]
+[ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="3_unfcc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr7k1"]
 bg_color = Color(0.30852813, 0.47659075, 0.7362028, 1)
@@ -87,5 +88,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_4xko2")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wplog")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0i86x")
 text = "Play Again"
+
+[node name="fadetransition" parent="Control" unique_id=330128582 instance=ExtResource("3_unfcc")]
+layout_mode = 1
+
+[node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=2129286420]
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

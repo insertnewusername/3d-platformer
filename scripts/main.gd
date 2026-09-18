@@ -1,9 +1,15 @@
 extends Node3D
 
 @onready var checkpoint_pos: Vector3 = Vector3(0.0, 0.492775, 0.0)
-
+@onready var fadetransition: ColorRect = $CanvasLayer/fadetransition
+@onready var fade_timer: Timer = $CanvasLayer/fadetransition/fade_timer
+@onready var animation: AnimationPlayer = $CanvasLayer/fadetransition/AnimationPlayer
 
 func _ready() -> void:
+	fadetransition.show()
+	fade_timer.start()
+	animation.play("fadein")
+	
 	Main.checkpoint_pos = Vector3(0.0, 0.492775, 0.0)
 	print("checkpointpos:", Main.checkpoint_pos)
 	if RenderingServer.get_current_rendering_method() == "gl_compatibility":
@@ -91,3 +97,7 @@ func _on_checkpoint_10_body_entered(body: Node3D) -> void:
 func _on_checkpoint_11_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		Main.checkpoint_pos = Vector3(-26.85294, 26.47202, 6.33021)
+
+
+func _on_fade_timer_timeout() -> void:
+	$Control/fadetransition.hide()

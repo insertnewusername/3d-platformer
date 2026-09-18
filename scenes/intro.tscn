@@ -112,12 +112,11 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bu1yb")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_t1qkj")
 text = "Play"
 
-[node name="ColorRect" parent="Control" unique_id=330128582 instance=ExtResource("3_4bx60")]
+[node name="fadetransition" parent="Control" unique_id=330128582 instance=ExtResource("3_4bx60")]
 visible = false
 layout_mode = 1
-offset_left = -592.0
-offset_top = -284.0
-offset_right = 959.0
-offset_bottom = 450.0
+
+[node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=52015826]
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Control/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]

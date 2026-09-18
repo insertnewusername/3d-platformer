@@ -129,12 +129,10 @@ offset_bottom = -159.0
 texture = ExtResource("3_4kdbh")
 expand_mode = 1
 
-[node name="ColorRect" parent="." unique_id=330128582 instance=ExtResource("5_6rap8")]
-visible = false
-offset_left = -274.0
-offset_top = -151.0
-offset_right = 1700.0
-offset_bottom = 909.0
+[node name="fadetransition" parent="Control" unique_id=330128582 instance=ExtResource("5_6rap8")]
+layout_mode = 1
+
+[node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=1500465925]
 
 [connection signal="pressed" from="Control/level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Control/level2" to="." method="_on_level_2_pressed"]
