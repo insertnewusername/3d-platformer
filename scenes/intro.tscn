@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cwwoe6remcly2" path="res://winscreenbg.png" id="2_wfs7u"]
 [ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="3_4bx60"]
 [ext_resource type="AudioStream" uid="uid://case27lp6rnkk" path="res://soundeffects/click.mp3" id="4_i2l1n"]
+[ext_resource type="AudioStream" uid="uid://ydm78dp0rhbi" path="res://soundeffects/menumusic.mp3" id="5_wfs7u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjqpq"]
 bg_color = Color(0.30852813, 0.47659075, 0.7362028, 1)
@@ -123,5 +124,9 @@ one_shot = true
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=852013203]
 stream = ExtResource("4_i2l1n")
 
+[node name="menubg" type="AudioStreamPlayer2D" parent="." unique_id=2083776256]
+stream = ExtResource("5_wfs7u")
+
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Control/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]
+[connection signal="finished" from="menubg" to="." method="_on_menubg_finished"]

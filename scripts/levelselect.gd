@@ -1,5 +1,6 @@
 extends Node2D
 @onready var click: AudioStreamPlayer2D = $click
+@onready var menubg: AudioStreamPlayer2D = $menubg
 
 var button_type = null
 # Called when the node enters the scene tree for the first time.
@@ -7,6 +8,7 @@ func _ready() -> void:
 	$Control/fadetransition.show()
 	$Control/fadetransition/fade_timer.start()
 	$Control/fadetransition/AnimationPlayer.play("fadein")
+	menubg.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,3 +54,7 @@ func _on_fade_timer_timeout() -> void:
 	else:
 		$Control/fadetransition.hide()
 		
+
+
+func _on_menubg_finished() -> void:
+	menubg.play()
