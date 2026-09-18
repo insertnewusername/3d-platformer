@@ -21,7 +21,7 @@ func _on_button_pressed() -> void:
 	click.play()
 	$Control/fadetransition.show()
 	$Control/fadetransition/fade_timer.start()
-	$Control/fadetransition/AnimationPlayer.play("fadein")
+	$Control/fadetransition/AnimationPlayer.play("fadeout")
 
 
 func _on_fade_timer_timeout() -> void:

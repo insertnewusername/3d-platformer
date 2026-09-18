@@ -154,7 +154,7 @@ func jump():
 	
 
 	if jump_single:
-		jump_single = false; # INFINITE JUMP FIX NOW
+		jump_single = true; # INFINITE JUMP FIX NOW
 
 # Collecting coins
 
