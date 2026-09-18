@@ -113,6 +113,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_t1qkj")
 text = "Play"
 
 [node name="ColorRect" parent="Control" unique_id=330128582 instance=ExtResource("3_4bx60")]
+visible = false
 layout_mode = 1
 offset_left = -592.0
 offset_top = -284.0

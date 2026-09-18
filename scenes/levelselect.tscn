@@ -130,6 +130,7 @@ texture = ExtResource("3_4kdbh")
 expand_mode = 1
 
 [node name="ColorRect" parent="." unique_id=330128582 instance=ExtResource("5_6rap8")]
+visible = false
 offset_left = -274.0
 offset_top = -151.0
 offset_right = 1700.0
