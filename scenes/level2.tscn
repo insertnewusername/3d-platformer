@@ -590,7 +590,7 @@ texture_filter = 1
 texture = ExtResource("24_xnv6s")
 
 [node name="seb5" type="Sprite3D" parent="World/sebby" unique_id=105006665]
-transform = Transform3D(1.5393529, 0.17885175, 0.03026746, 0.030427199, 0.00037804668, -1.5497016, -0.17882515, 1.539649, -0.0031354874, -27.226246, 26.601776, 6.4149528)
+transform = Transform3D(1.5393529, 0.17885174, 0.030267458, 0.030427199, 0.00037804668, -1.5497016, -0.17882515, 1.5396491, -0.0031354874, -27.226246, 26.572685, 6.4149523)
 texture_filter = 1
 texture = ExtResource("24_xnv6s")
 
