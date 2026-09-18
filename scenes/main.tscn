@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://djpme521r3cxe" path="res://scripts/main.gd" id="1_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_onms2"]
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://scripts/view.gd" id="5_bg0fr"]
+[ext_resource type="Script" uid="uid://bc1srp1ro0rwm" path="res://scripts/world.gd" id="5_y6deb"]
 [ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://objects/platform.tscn" id="6_sdmev"]
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://objects/platform_medium.tscn" id="7_ixpj3"]
 [ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://objects/platform_grass_large_round.tscn" id="8_4oh1e"]
@@ -57,6 +58,7 @@ current = true
 fov = 40.0
 
 [node name="World" type="Node3D" parent="." unique_id=1473476270]
+script = ExtResource("5_y6deb")
 
 [node name="platform" parent="World" unique_id=788994784 instance=ExtResource("6_sdmev")]
 transform = Transform3D(0.993085, 0, -0.117399, 0, 1, 0, 0.117399, 0, 0.993085, 0, 0, 0)
@@ -361,8 +363,9 @@ metadata/_edit_use_anchors_ = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1878361688]
 
 [node name="fadetransition" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("23_pm3ni")]
+visible = false
 
-[node name="fade_timer" type="Timer" parent="CanvasLayer/fadetransition" unique_id=735769809]
+[node name="fade_timer" type="Timer" parent="CanvasLayer/fadetransition" unique_id=1916177411]
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
@@ -372,4 +375,3 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint5" to="." method="_on_checkpoint_5_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint6" to="." method="_on_checkpoint_6_body_entered"]
 [connection signal="body_entered" from="World/flag2" to="." method="_on_flag_2_body_entered"]
-[connection signal="timeout" from="CanvasLayer/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]
