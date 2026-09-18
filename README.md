@@ -7,7 +7,7 @@ This project essentially got a full renovation. The only thing that was here bef
 
 
 Level 1 is live ysws themed if you couldn't tell btw
-
+THIS ENTIRE GAME IS BEATABLE BTW, it just may be kinda hard...
 New features added:
 	Level 1
 	Sound effects
