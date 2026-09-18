@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	Main.checkpoint_pos = Vector3(0.0, 0.492775, 0.0)
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://scenes/levelselect.tscn")
 		
 
 
