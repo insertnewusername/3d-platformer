@@ -1,5 +1,10 @@
 # JUMPY
 
+
+Note: There are some issues with my exporting, but idk how to fix it so yeah, cuz it works fine on godot, but there are some problems on the web.
+Known issues currently: The background for the levels is dark, although the sky is actualy supposed to be light. Also some of the screen ratios are weird. Yeah u can cope with those cuz I'm still learning godot exporting.
+
+
 This is a 3d platformer I made using Godot.
 As I knew I would actually put lots of effort into this project, I was very paranoid at the start of time deduction, so I've taken every measure I can think of to not get time deducted, so hopefully I don't get deducted for this project, as I've actually spent lots of hard work on it.
 Note: I updated this project within the duration of live ysws starting. 
