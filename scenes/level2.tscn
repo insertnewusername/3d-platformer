@@ -36,6 +36,7 @@
 [ext_resource type="ArrayMesh" uid="uid://7iuxm061evpq" path="res://furniture obj/sideTableDrawers.obj" id="30_4vsvd"]
 [ext_resource type="ArrayMesh" uid="uid://djtl25sw1k2pl" path="res://OBJ format/desk.obj" id="32_icuov"]
 [ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="33_icuov"]
+[ext_resource type="AudioStream" uid="uid://b6yjsrhgrwui0" path="res://soundeffects/game1backgroundmusic.mp3" id="37_4vsvd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
 
@@ -685,6 +686,9 @@ mesh = ExtResource("30_4vsvd")
 [node name="fade_timer" type="Timer" parent="CanvasLayer/fadetransition" unique_id=591809315]
 one_shot = true
 
+[node name="bgmusic" type="AudioStreamPlayer2D" parent="." unique_id=790990975]
+stream = ExtResource("37_4vsvd")
+
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint8" to="." method="_on_checkpoint_8_body_entered"]
@@ -695,3 +699,5 @@ one_shot = true
 [connection signal="body_entered" from="World/sebby/trashcan" to="." method="_on_trashcan_body_entered"]
 [connection signal="timeout" from="CanvasLayer/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/fadetransition/fade_timer" to="World" method="_on_fade_timer_timeout"]
+[connection signal="finished" from="bgmusic" to="." method="_on_bgmusic_finished"]
+[connection signal="finished" from="bgmusic" to="World" method="_on_bgmusic_finished"]
