@@ -679,8 +679,10 @@ transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 
 mesh = ExtResource("30_4vsvd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=176477315]
+visible = false
 
 [node name="fadetransition" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("33_icuov")]
+visible = false
 
 [node name="fade_timer" type="Timer" parent="CanvasLayer/fadetransition" unique_id=591809315]
 
