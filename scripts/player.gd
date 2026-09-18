@@ -151,6 +151,8 @@ func jump():
 	gravity = -jump_strength
 
 	model.scale = Vector3(0.5, 1.5, 0.5)
+	
+	print(global_position)
 
 	if jump_single:
 		jump_single = true; # INFINITE JUMP FIX NOW
