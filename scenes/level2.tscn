@@ -32,6 +32,7 @@
 [ext_resource type="ArrayMesh" uid="uid://6e3prkljvcff" path="res://furniture obj/speaker.obj" id="29_wso6h"]
 [ext_resource type="ArrayMesh" uid="uid://7iuxm061evpq" path="res://furniture obj/sideTableDrawers.obj" id="30_4vsvd"]
 [ext_resource type="ArrayMesh" uid="uid://djtl25sw1k2pl" path="res://OBJ format/desk.obj" id="32_icuov"]
+[ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="33_icuov"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
 
@@ -565,6 +566,10 @@ mesh = ExtResource("30_4vsvd")
 [node name="Desk" type="MeshInstance3D" parent="." unique_id=17209363]
 transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -28.360834, 26.521152, 5.662129)
 mesh = ExtResource("32_icuov")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=176477315]
+
+[node name="ColorRect" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("33_icuov")]
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]

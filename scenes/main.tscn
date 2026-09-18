@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://die2kf4o6k8gt" path="res://objects/movinglazerr.tscn" id="17_yc10j"]
 [ext_resource type="PackedScene" uid="uid://8xq3k5gyl27o" path="res://objects/flag.tscn" id="18_jscy8"]
 [ext_resource type="PackedScene" uid="uid://b1shqm2pmcii4" path="res://objects/finishplat.tscn" id="19_pm3ni"]
+[ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="23_pm3ni"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
 size = Vector3(4.6347656, 1, 5.5875244)
@@ -356,6 +357,10 @@ offset_bottom = 123.0
 text = "0"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1878361688]
+
+[node name="ColorRect" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("23_pm3ni")]
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
