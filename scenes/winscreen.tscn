@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cwwoe6remcly2" path="res://winscreenbg.png" id="1_47rfs"]
 [ext_resource type="Script" uid="uid://bceihxxndts3k" path="res://scripts/winscreen.gd" id="1_wg0yv"]
 [ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="3_unfcc"]
+[ext_resource type="AudioStream" uid="uid://duti7f2fgrrdi" path="res://soundeffects/yippeeeeeeeeeeeeee.mp3" id="4_l4jp6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr7k1"]
 bg_color = Color(0.30852813, 0.47659075, 0.7362028, 1)
@@ -93,5 +94,10 @@ text = "Play Again"
 layout_mode = 1
 
 [node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=2129286420]
+one_shot = true
+
+[node name="yippee" type="AudioStreamPlayer2D" parent="." unique_id=1614578353]
+stream = ExtResource("4_l4jp6")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Control/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]

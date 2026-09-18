@@ -117,6 +117,7 @@ visible = false
 layout_mode = 1
 
 [node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=52015826]
+one_shot = true
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Control/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]
