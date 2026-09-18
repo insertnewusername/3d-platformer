@@ -81,13 +81,13 @@ func _on_trashcan_body_entered(body: Node3D) -> void:
 
 func _on_checkpoint_9_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		body.global_position = Vector3(-17.3019, 8.200462, -19.25723)
+		Main.checkpoint_pos = Vector3(-17.3019, 8.200462, -19.25723)
 
 func _on_checkpoint_10_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		body.global_position = Vector3(0.278233, 15.69917, -2.692184)
+		Main.checkpoint_pos = Vector3(0.278233, 15.69917, -2.692184)
 
 
 func _on_checkpoint_11_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		body.global_position = Vector3(-26.85294, 26.47202, 6.33021)
+		Main.checkpoint_pos = Vector3(-26.85294, 26.47202, 6.33021)
