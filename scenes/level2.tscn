@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="3_ekhvm"]
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://scripts/view.gd" id="4_nflru"]
 [ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://objects/platform.tscn" id="5_ikw2v"]
+[ext_resource type="Script" uid="uid://bc1srp1ro0rwm" path="res://scripts/world.gd" id="5_wso6h"]
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://objects/platform_medium.tscn" id="6_cgqhq"]
 [ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://objects/platform_grass_large_round.tscn" id="7_ttvjw"]
 [ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="8_ac7c3"]
@@ -114,6 +115,7 @@ current = true
 fov = 40.0
 
 [node name="World" type="Node3D" parent="." unique_id=1473476270]
+script = ExtResource("5_wso6h")
 
 [node name="platform3" parent="World" unique_id=926589032 instance=ExtResource("5_ikw2v")]
 transform = Transform3D(0.9662364, 0, -0.2576557, 0, 1, 0, 0.2576557, 0, 0.9662364, -30.520548, 6.016974, -20.117094)
@@ -677,7 +679,6 @@ transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 
 mesh = ExtResource("30_4vsvd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=176477315]
-visible = false
 
 [node name="fadetransition" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("33_icuov")]
 
@@ -692,3 +693,4 @@ visible = false
 [connection signal="body_entered" from="World/flag2" to="." method="_on_flag_2_body_entered"]
 [connection signal="body_entered" from="World/sebby/trashcan" to="." method="_on_trashcan_body_entered"]
 [connection signal="timeout" from="CanvasLayer/fadetransition/fade_timer" to="." method="_on_fade_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/fadetransition/fade_timer" to="World" method="_on_fade_timer_timeout"]

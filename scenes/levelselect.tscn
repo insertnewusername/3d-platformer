@@ -130,6 +130,7 @@ texture = ExtResource("3_4kdbh")
 expand_mode = 1
 
 [node name="fadetransition" parent="Control" unique_id=330128582 instance=ExtResource("5_6rap8")]
+visible = false
 layout_mode = 1
 
 [node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=1500465925]
