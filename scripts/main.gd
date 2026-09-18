@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var checkpoint_pos: Vector3 = Vector3(0.0, 0.492775, 0.0)
+@onready var vineboom: AudioStreamPlayer2D = $vineboom
 
 
 func _ready() -> void:
@@ -76,6 +77,7 @@ func _on_checkpoint_8_body_entered(body: Node3D) -> void:
 
 func _on_trashcan_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
+		vineboom.play()
 		body.global_position = Vector3(0.278233, 15.69917, -2.692184)
 
 

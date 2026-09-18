@@ -37,6 +37,7 @@
 [ext_resource type="ArrayMesh" uid="uid://djtl25sw1k2pl" path="res://OBJ format/desk.obj" id="32_icuov"]
 [ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="33_icuov"]
 [ext_resource type="AudioStream" uid="uid://b6yjsrhgrwui0" path="res://soundeffects/game1backgroundmusic.mp3" id="37_4vsvd"]
+[ext_resource type="AudioStream" uid="uid://dl4ruxf08nnlq" path="res://soundeffects/vine-boom.mp3" id="38_ehxya"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
 
@@ -234,10 +235,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.286071, 3.318167, 1.622626
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6348104, 17.397259, -2.6229837)
 
 [node name="coin2" parent="World/Coins" unique_id=2070846440 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.914193, 7.8113623, -11.726671)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.81318, 7.8113623, -19.438705)
 
 [node name="coin3" parent="World/Coins" unique_id=923602488 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321427, 10.5390835, -6.7708836)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1213007, 1.5790358, 0.4316327)
 
 [node name="coin5" parent="World/Coins" unique_id=1979938307 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.544922, 3.7633715, 1.7974677)
@@ -249,7 +250,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99194753, 12.57854, -16.20
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.81537, 5.0248384, -8.492798)
 
 [node name="coin8" parent="World/Coins" unique_id=1169078731 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.196327, 7.2588987, -23.422709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.485893, 8.984208, -19.477633)
 
 [node name="coin9" parent="World/Coins" unique_id=1469699715 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14139767, 16.009563, -2.7735662)
@@ -258,7 +259,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14139767, 16.009563, -2.773
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.539168, 9.118038, -18.952633)
 
 [node name="coin11" parent="World/Coins" unique_id=433143402 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.505932, 10.172349, -5.2540894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.408142, 20.067038, -5.258517)
 
 [node name="coin12" parent="World/Coins" unique_id=508948501 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.592281, 7.255641, -19.75785)
@@ -267,7 +268,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.592281, 7.255641, -19.757
 transform = Transform3D(0.9983825, -0.047701135, 0.030934554, 0.048055973, 0.998786, -0.010830171, -0.03038038, 0.012299257, 0.99946254, -28.042976, 24.497362, -2.5507777)
 
 [node name="coin14" parent="World/Coins" unique_id=529440621 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.89494, 14.109476, -9.658419)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.88838, 7.1180773, -15.430205)
 
 [node name="coin15" parent="World/Coins" unique_id=710823460 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7219677, 21.623882, 7.8470187)
@@ -690,6 +691,7 @@ one_shot = true
 stream = ExtResource("37_4vsvd")
 
 [node name="vineboom" type="AudioStreamPlayer2D" parent="." unique_id=687907604]
+stream = ExtResource("38_ehxya")
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
