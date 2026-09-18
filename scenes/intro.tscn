@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5tuoumb334cg" path="res://scripts/levelselect.gd" id="1_i2l1n"]
 [ext_resource type="Texture2D" uid="uid://cwwoe6remcly2" path="res://winscreenbg.png" id="2_wfs7u"]
+[ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="3_4bx60"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjqpq"]
 bg_color = Color(0.30852813, 0.47659075, 0.7362028, 1)
@@ -110,5 +111,12 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0naf5")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bu1yb")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_t1qkj")
 text = "Play"
+
+[node name="ColorRect" parent="Control" unique_id=330128582 instance=ExtResource("3_4bx60")]
+layout_mode = 1
+offset_left = -592.0
+offset_top = -284.0
+offset_right = 959.0
+offset_bottom = 450.0
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
