@@ -1,6 +1,21 @@
 # JUMPY
 
 This is a 3d platformer I made using Godot.
+As I knew I would actually put lots of effort into this project, I was very paranoid at the start of time deduction, so I've taken every measure I can think of to not get time deducted, so hopefully I don't get deducted for this project, as I've actually spent lots of hard work on it.
+Note: I updated this project within the duration of live ysws starting. 
+This project essentially got a full renovation. The only thing that was here before I updated this project was level2, and the winscreen without sound effects
+
+
+Level 1 is live ysws themed if you couldn't tell btw
+
+New features added:
+	Level 1
+	Sound effects
+	Intro and Level select screen
+	Fade in and out transition
+	Seb pics
+	Much more!
+	Yeah this is essentially a new project from when I shipped last. Btw I already split the project so the hours I've submitted have not been submitted to anything else before
 
 It uses Godot and stuff, so godotscript ig.
 
