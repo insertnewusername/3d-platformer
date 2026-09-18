@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://scripts/hud.gd" id="20_etc3t"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="21_go57r"]
 [ext_resource type="Script" uid="uid://c2nh6l872ay1w" path="res://scripts/platformupdown.gd" id="21_qo7hg"]
+[ext_resource type="ArrayMesh" uid="uid://bpalm24lglrpl" path="res://OBJ format/cabinetTelevision.obj" id="22_3xffc"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="22_58bux"]
 [ext_resource type="ArrayMesh" uid="uid://dk5hxi6jx0fje" path="res://furniture obj/kitchenMicrowave.obj" id="23_qo7hg"]
 [ext_resource type="ArrayMesh" uid="uid://coykqgn7o0v2i" path="res://furniture obj/laptop.obj" id="24_odav0"]
@@ -30,6 +31,7 @@
 [ext_resource type="ArrayMesh" uid="uid://df0wtrsdh1lfh" path="res://furniture obj/radio.obj" id="28_6lk74"]
 [ext_resource type="ArrayMesh" uid="uid://6e3prkljvcff" path="res://furniture obj/speaker.obj" id="29_wso6h"]
 [ext_resource type="ArrayMesh" uid="uid://7iuxm061evpq" path="res://furniture obj/sideTableDrawers.obj" id="30_4vsvd"]
+[ext_resource type="ArrayMesh" uid="uid://djtl25sw1k2pl" path="res://OBJ format/desk.obj" id="32_icuov"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y6lc1"]
 
@@ -181,7 +183,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4530079, 11.932116, -15.21
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.147781, 7.7495995, -19.263874)
 
 [node name="platform-grass-large-round6" parent="World" unique_id=1580700231 instance=ExtResource("7_ttvjw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.064013, 15.458872, 7.848389)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.183825, 26.021152, 6.4005475)
 
 [node name="FINISHLINE" parent="World" unique_id=775873244 instance=ExtResource("16_4vsvd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38038942, 17.164448, 8.389587)
@@ -472,7 +474,7 @@ shape = SubResource("ConcavePolygonShape3D_icuov")
 transform = Transform3D(-0.815111, 0.78878146, -1.6472448, 0.34895554, 1.8378854, 0.7073944, 1.7927135, 0.0008948447, -0.8866651, -15.285779, 17.91715, -3.1667252)
 
 [node name="LoungeDesignSofa" type="MeshInstance3D" parent="World/laptop/lounge4" unique_id=827152268]
-transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.13537121, 0)
+transform = Transform3D(1.0000002, 5.220174e-11, 2.9802322e-08, -1.5375106e-09, 1, -6.592249e-09, 0, -2.5750966e-11, 1.0000002, 0, 0.13537121, 0)
 mesh = ExtResource("26_icuov")
 skeleton = NodePath("../../../..")
 
@@ -483,6 +485,10 @@ shape = SubResource("ConcavePolygonShape3D_icuov")
 [node name="platform-grass-large-round7" parent="World" unique_id=898839763 instance=ExtResource("7_ttvjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.587694, 20.061169, -2.6598532)
 script = ExtResource("21_qo7hg")
+
+[node name="CabinetTelevision" type="MeshInstance3D" parent="World" unique_id=289750694]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -27.487993, 26.521152, 5.146976)
+mesh = ExtResource("22_3xffc")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
@@ -555,6 +561,10 @@ mesh = ExtResource("29_wso6h")
 [node name="SideTableDrawers" type="MeshInstance3D" parent="." unique_id=1900770919]
 transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -16.575563, 8.249599, -20.915535)
 mesh = ExtResource("30_4vsvd")
+
+[node name="Desk" type="MeshInstance3D" parent="." unique_id=17209363]
+transform = Transform3D(0.99999934, 0, -0.0011344638, 0, 1, 0, 0.0011344638, 0, 0.99999934, -28.360834, 26.521152, 5.662129)
+mesh = ExtResource("32_icuov")
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
