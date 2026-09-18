@@ -25,6 +25,7 @@
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="22_58bux"]
 [ext_resource type="ArrayMesh" uid="uid://dk5hxi6jx0fje" path="res://furniture obj/kitchenMicrowave.obj" id="23_qo7hg"]
 [ext_resource type="ArrayMesh" uid="uid://coykqgn7o0v2i" path="res://furniture obj/laptop.obj" id="24_odav0"]
+[ext_resource type="Texture2D" uid="uid://csn5q1hkfae20" path="res://icon.png" id="24_xnv6s"]
 [ext_resource type="ArrayMesh" uid="uid://dtvq2y8pfhhww" path="res://furniture obj/loungeChair.obj" id="25_3xffc"]
 [ext_resource type="ArrayMesh" uid="uid://b6hbgpxgd2bwp" path="res://furniture obj/loungeDesignSofa.obj" id="26_icuov"]
 [ext_resource type="ArrayMesh" uid="uid://clcnd65vl4wdm" path="res://furniture obj/pillowBlue.obj" id="27_xnv6s"]
@@ -565,6 +566,10 @@ skeleton = NodePath("../../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/desk/desk4" unique_id=69287525]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0, 2.3841858e-07)
 shape = SubResource("ConcavePolygonShape3D_xnv6s")
+
+[node name="Sprite3D" type="Sprite3D" parent="World" unique_id=812219188]
+transform = Transform3D(1.2999979, -0.0022687889, 9.9171914e-11, 0, -5.6824803e-08, -1.3, 0.0022687889, 1.2999979, -5.6824714e-08, -0.17223865, 0.39805913, -0.46070975)
+texture = ExtResource("24_xnv6s")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2119582164]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
