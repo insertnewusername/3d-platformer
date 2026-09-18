@@ -167,13 +167,34 @@ mesh = SubResource("BoxMesh_ekhvm")
 
 [node name="Checkpoint9" type="Area3D" parent="World/Checkpoints" unique_id=58378026]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.297104, 8.05113, -19.771862)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint9" unique_id=166145158]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
 shape = SubResource("BoxShape3D_63e4f")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint9" unique_id=1827035230]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_ekhvm")
+
+[node name="Checkpoint10" type="Area3D" parent="World/Checkpoints" unique_id=2122844026]
+transform = Transform3D(0.99869716, 0.0036809773, -0.050896548, -0.0013608022, 0.9989613, 0.045545436, 0.051011313, -0.04541684, 0.9976648, 0.018714143, 15.927132, -2.8652024)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint10" unique_id=69221712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_63e4f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint10" unique_id=119610045]
+transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
+mesh = SubResource("BoxMesh_ekhvm")
+
+[node name="Checkpoint11" type="Area3D" parent="World/Checkpoints" unique_id=1273290218]
+transform = Transform3D(0.99869716, 0.0036809773, -0.050896548, -0.0013608022, 0.9989613, 0.045545436, 0.051011283, -0.04541684, 0.9976648, -27.240557, 26.755125, 6.0727096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Checkpoints/Checkpoint11" unique_id=1676783935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08984375, 0, 0.21466064)
+shape = SubResource("BoxShape3D_63e4f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Checkpoints/Checkpoint11" unique_id=1516099267]
 transform = Transform3D(3.0330265, 0, 0, 0, 1, 0, 0, 0, 4.254046, 0, 0.14813066, 0.41261202)
 mesh = SubResource("BoxMesh_ekhvm")
 
@@ -190,10 +211,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.147781, 7.7495995, -19.26
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.183825, 26.021152, 6.4005475)
 
 [node name="FINISHLINE" parent="World" unique_id=775873244 instance=ExtResource("16_4vsvd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38038942, 17.164448, 8.389587)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37882116, 18.187838, 9.771905)
 
 [node name="flag2" parent="World" unique_id=70985541 instance=ExtResource("17_ehxya")]
-transform = Transform3D(0.70710665, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.70710665, -0.016493067, 17.382303, 8.538197)
+transform = Transform3D(0.70710653, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.70710653, -0.017497793, 18.405693, 9.423838)
 script = ExtResource("18_tn25f")
 
 [node name="Coins" type="Node3D" parent="World" unique_id=1966544812]
