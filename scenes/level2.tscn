@@ -689,6 +689,8 @@ one_shot = true
 [node name="bgmusic" type="AudioStreamPlayer2D" parent="." unique_id=790990975]
 stream = ExtResource("37_4vsvd")
 
+[node name="vineboom" type="AudioStreamPlayer2D" parent="." unique_id=687907604]
+
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint8" to="." method="_on_checkpoint_8_body_entered"]

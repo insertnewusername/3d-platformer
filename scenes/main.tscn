@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://8xq3k5gyl27o" path="res://objects/flag.tscn" id="18_jscy8"]
 [ext_resource type="PackedScene" uid="uid://b1shqm2pmcii4" path="res://objects/finishplat.tscn" id="19_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="23_pm3ni"]
+[ext_resource type="AudioStream" uid="uid://dcnm231lp6sbd" path="res://soundeffects/gamebackgroundmusic2.mp3" id="25_og1vs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
 size = Vector3(4.6347656, 1, 5.5875244)
@@ -366,6 +367,10 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [node name="fade_timer" type="Timer" parent="CanvasLayer/fadetransition" unique_id=1916177411]
+
+[node name="bgmusic" type="AudioStreamPlayer2D" parent="." unique_id=1523998156]
+stream = ExtResource("25_og1vs")
+volume_db = -2.0
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint1" to="." method="_on_checkpoint_1_body_entered"]
