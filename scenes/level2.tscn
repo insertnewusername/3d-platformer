@@ -199,10 +199,10 @@ script = ExtResource("18_tn25f")
 [node name="Coins" type="Node3D" parent="World" unique_id=1966544812]
 
 [node name="coin" parent="World/Coins" unique_id=1599954285 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.635, -2.3283064e-10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.286071, 3.318167, 1.6226263)
 
 [node name="coin10" parent="World/Coins" unique_id=178424777 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.768289, 0.635, -0.987194)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6348104, 17.397259, -2.6229837)
 
 [node name="coin2" parent="World/Coins" unique_id=2070846440 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.914193, 7.8113623, -11.726671)
@@ -211,37 +211,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.914193, 7.8113623, -11.726
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.321427, 10.5390835, -6.7708836)
 
 [node name="coin5" parent="World/Coins" unique_id=1979938307 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.540863, 2.7096884, -1.7736834)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.544922, 3.7633715, 1.7974677)
 
 [node name="coin6" parent="World/Coins" unique_id=847636011 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4234083, 7.1700435, -22.455343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99194753, 12.57854, -16.204254)
 
 [node name="coin7" parent="World/Coins" unique_id=904703811 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.715446, 3.6712816, -20.737625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.81537, 5.0248384, -8.492798)
 
 [node name="coin8" parent="World/Coins" unique_id=1169078731 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.196327, 7.2588987, -23.422709)
 
 [node name="coin9" parent="World/Coins" unique_id=1469699715 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4255899, 10.308501, -5.4364963)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14139767, 16.009563, -2.7735662)
 
 [node name="coin4" parent="World/Coins" unique_id=1721017398 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.53591, 5.801553, -21.824759)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.539168, 9.118038, -18.952633)
 
 [node name="coin11" parent="World/Coins" unique_id=433143402 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.505932, 10.172349, -5.2540894)
 
 [node name="coin12" parent="World/Coins" unique_id=508948501 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.58608, 5.272476, -25.221024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.592281, 7.255641, -19.75785)
 
 [node name="coin13" parent="World/Coins" unique_id=145441231 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.054268, 16.576515, 7.394778)
+transform = Transform3D(0.9983825, -0.047701135, 0.030934554, 0.048055973, 0.998786, -0.010830171, -0.03038038, 0.012299257, 0.99946254, -28.042976, 24.497362, -2.5507777)
 
 [node name="coin14" parent="World/Coins" unique_id=529440621 instance=ExtResource("19_5b1db")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.89494, 14.109476, -9.658419)
 
 [node name="coin15" parent="World/Coins" unique_id=710823460 instance=ExtResource("19_5b1db")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.553867, 19.438326, 7.908927)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7219677, 21.623882, 7.8470187)
 
 [node name="beds" type="Node3D" parent="World" unique_id=1243479698]
 
@@ -619,7 +619,6 @@ mesh = ExtResource("30_4vsvd")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=176477315]
 
 [node name="ColorRect" parent="CanvasLayer" unique_id=330128582 instance=ExtResource("33_icuov")]
-visible = false
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="World/Checkpoints/Checkpoint7" to="." method="_on_checkpoint_7_body_entered"]
