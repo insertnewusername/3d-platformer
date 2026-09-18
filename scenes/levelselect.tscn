@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://mv0iiwmt0q5v" path="res://level1.png" id="2_vttqt"]
 [ext_resource type="Texture2D" uid="uid://dtf33dlgvfypp" path="res://level2.png" id="3_4kdbh"]
 [ext_resource type="PackedScene" uid="uid://cjp67eq4q5u4h" path="res://scenes/transitionfade.tscn" id="5_6rap8"]
+[ext_resource type="AudioStream" uid="uid://case27lp6rnkk" path="res://soundeffects/click.mp3" id="6_aaiik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vttqt"]
 bg_color = Color(0.30852813, 0.47659075, 0.7362028, 1)
@@ -143,13 +144,6 @@ offset_bottom = -159.0
 texture = ExtResource("3_4kdbh")
 expand_mode = 1
 
-[node name="fadetransition" parent="Control" unique_id=330128582 instance=ExtResource("5_6rap8")]
-visible = false
-layout_mode = 1
-
-[node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=1500465925]
-one_shot = true
-
 [node name="Label2" type="Label" parent="Control" unique_id=1137401888]
 layout_mode = 1
 anchors_preset = 15
@@ -166,6 +160,16 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_nqdjo")
 theme_override_styles/focus = SubResource("StyleBoxFlat_rsw7q")
 text = "For live ysws!"
+
+[node name="fadetransition" parent="Control" unique_id=330128582 instance=ExtResource("5_6rap8")]
+visible = false
+layout_mode = 1
+
+[node name="fade_timer" type="Timer" parent="Control/fadetransition" unique_id=1500465925]
+one_shot = true
+
+[node name="click" type="AudioStreamPlayer2D" parent="." unique_id=1456543496]
+stream = ExtResource("6_aaiik")
 
 [connection signal="pressed" from="Control/level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Control/level2" to="." method="_on_level_2_pressed"]

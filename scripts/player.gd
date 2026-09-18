@@ -152,10 +152,9 @@ func jump():
 
 	model.scale = Vector3(0.5, 1.5, 0.5)
 	
-	print(global_position)
 
 	if jump_single:
-		jump_single = true; # INFINITE JUMP FIX NOW
+		jump_single = false; # INFINITE JUMP FIX NOW
 
 # Collecting coins
 

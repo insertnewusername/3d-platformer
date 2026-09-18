@@ -1,4 +1,5 @@
 extends Node2D
+@onready var click: AudioStreamPlayer2D = $click
 
 var button_type = null
 # Called when the node enters the scene tree for the first time.
@@ -14,12 +15,14 @@ func _process(delta: float) -> void:
 
 
 func _on_level_1_pressed() -> void:
+	click.play()
 	button_type = "level1"
 	$Control/fadetransition.show()
 	$Control/fadetransition/fade_timer.start()
 	$Control/fadetransition/AnimationPlayer.play("fadeout")
 
 func _on_level_2_pressed() -> void:
+	click.play()
 	button_type = "level2"
 	$Control/fadetransition.show()
 	$Control/fadetransition/fade_timer.start()
@@ -28,6 +31,7 @@ func _on_level_2_pressed() -> void:
 
 
 func _on_button_pressed() -> void:
+	click.play()
 	button_type = "menu"
 	$Control/fadetransition.show()
 	$Control/fadetransition/fade_timer.start()
